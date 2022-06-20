@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import {ParallaxProvider} from "react-scroll-parallax";
 
-import AppRouter from './AppRouter';
+import "./assets/fonts/pretendardvariable.css";
+import "./assets/fonts/pretendardvariable-jp.css";
+
+import AppRouter from "./AppRouter";
 
 const App: React.FC = () => {
   return (
-    <AppRouter />
+      <ParallaxProvider>
+        <AppRouter />
+      </ParallaxProvider>
   );
-}
+};
 
 export default App;

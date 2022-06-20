@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Main from './views/Main';
+import Resume from './views/Resume';
 
 const AppRouter: React.FC = () => {
 	return (
 		<BrowserRouter >
-		<Routes>
-			<Route path="/" element={<Main />} />
+			<Routes>
+				<Route path="/resume" element={<Resume />} />
 			</Routes>
 		</BrowserRouter>
 	);
