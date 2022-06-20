@@ -43,8 +43,8 @@ const ProfileIcon = styled.img`
   transition: all 0.3s ease-in-out;
 
   @media (min-width: 768px) {
-    width: 8em;
-    height: 8em;
+    width: 12em;
+    height: 12em;
   }
 `;
 
