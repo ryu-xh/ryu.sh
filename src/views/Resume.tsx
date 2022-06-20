@@ -1,4 +1,5 @@
 import React from "react";
+import { Scrollbar } from "smooth-scrollbar-react";
 import { useTranslation } from "react-i18next";
 import Typewriter from 'typewriter-effect';
 import styled from "styled-components";
@@ -38,8 +39,8 @@ const ContentHeader = styled.div`
 
 const ProfileIcon = styled.img`
   border-radius: 50%;
-  width: 5em;
-  height: 5em;
+  width: 5.5em;
+  height: 5.5em;
   transition: all 0.3s ease-in-out;
 
   @media (min-width: 768px) {
@@ -70,17 +71,20 @@ const Introduce = styled.span`
 const IntroduceTitle = styled.span`
   font-size: 1.4rem;
   font-weight: 700;
-  padding-right: 100px;
+  padding-right: 2rem;
+
+  transition: all 0.3s ease-in-out;
 
   @media (min-width: 768px) {
     font-size: 1.6rem;
+  padding-right: 4rem;
   }
 
 `;
 
 
 const CoffeeImage = styled.img`
-padding: 20px 0px;
+  padding: 20px 0px;
   width: 100%;
   word-break: keep-all;
 `;
@@ -91,36 +95,38 @@ const Resume: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <Container>
-      <Content>
-        <ContentHeader>
-          <Title>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter.typeString(`${t("resume.title")}`)
-                  .start();
-              }}
-              options={{
-                autoStart: true,
-                cursor: "|",
-              }}
-            />
-          </Title>
-          <ProfileIcon src={Self} alt="me" />
-        </ContentHeader>
+    <Scrollbar>
+      <Container>
+        <Content>
+          <ContentHeader>
+            <Title>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString(`${t("resume.title")}`)
+                    .start();
+                }}
+                options={{
+                  autoStart: true,
+                  cursor: "|",
+                }}
+              />
+            </Title>
+            <ProfileIcon src={Self} alt="me" />
+          </ContentHeader>
 
-        <Profile>
-          <IntroduceTitle>{t("resume.introduce_title")}</IntroduceTitle>
-          <Introduce>
-            저는 리액트와 리액트 네이티브를 사용한 프론트엔드 개발과 장고를 사용한 백엔드 개발을 좋아하며, 항상 모두가 보기 좋은 코드를 작성하는 것을 좋아합니다.<br/>
-            함께 커피 한잔 마시면서 이야기를 하고 싶어요.
-            <CoffeeImage src={Coffee} alt="cafe latte" />
-          </Introduce>
+          <Profile>
+            <IntroduceTitle>{t("resume.introduce_title")}</IntroduceTitle>
+            <Introduce>
+              저는 리액트와 리액트 네이티브를 사용한 프론트엔드 개발과 장고를 사용한 백엔드 개발을 좋아하며, 항상 모두가 보기 좋은 코드를 작성하는 것을 좋아합니다.<br />
+              함께 커피 한잔 마시면서 이야기를 하고 싶어요.
+              <CoffeeImage src={Coffee} alt="cafe latte" />
+            </Introduce>
 
 
-        </Profile>
-      </Content>
-    </Container>
+          </Profile>
+        </Content>
+      </Container>
+    </Scrollbar>
   );
 };
 
