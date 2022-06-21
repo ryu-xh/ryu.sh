@@ -8,6 +8,7 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 body:lang(ja) {
@@ -30,4 +31,8 @@ body:lang(ko) {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+img {
+  transform: translate(0px, 0px)!important;
 }

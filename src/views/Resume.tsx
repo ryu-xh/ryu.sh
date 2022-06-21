@@ -22,6 +22,8 @@ const Title = styled.span`
   font-size: 1.5rem;
   line-height: 1.3em;
   transition: all 0.3s ease-in-out;
+  
+  white-space: pre-line;
 
   @media (min-width: 768px) {
     font-size: 1.8rem;
@@ -42,6 +44,8 @@ const ProfileIcon = styled.img`
   width: 5.5em;
   height: 5.5em;
   transition: all 0.3s ease-in-out;
+
+  -webkit-user-drag: none;
 
   @media (min-width: 768px) {
     width: 12em;
@@ -82,6 +86,13 @@ const IntroduceTitle = styled.span`
 
 `;
 
+const IntroduceDescription = styled.span`
+  font-size: 1.2rem;
+  white-space: pre-line;
+
+  line-height: 2.3rem;
+`;
+
 
 const CoffeeImage = styled.img`
   padding: 20px 0px;
@@ -117,11 +128,9 @@ const Resume: React.FC = () => {
           <Profile>
             <IntroduceTitle>{t("resume.introduce_title")}</IntroduceTitle>
             <Introduce>
-              저는 리액트와 리액트 네이티브를 사용한 프론트엔드 개발과 장고를 사용한 백엔드 개발을 좋아하며, 항상 모두가 보기 좋은 코드를 작성하는 것을 좋아합니다.<br />
-              함께 커피 한잔 마시면서 이야기를 하고 싶어요.
-              <CoffeeImage src={Coffee} alt="cafe latte" />
+              <IntroduceDescription>{t("resume.introduce_description")}</IntroduceDescription>
+              <CoffeeImage src={Coffee} alt="latte" />
             </Introduce>
-
 
           </Profile>
         </Content>
