@@ -65,8 +65,6 @@ const Introduce = styled.span`
   font-size: 1rem;
   line-height: 1.7em;
 
-  word-break: keep-all;
-
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
@@ -82,7 +80,7 @@ const IntroduceTitle = styled.span`
 
   @media (min-width: 768px) {
     font-size: 1.6rem;
-  padding-right: 4rem;
+    padding-right: 4rem;
   }
 
 `;
@@ -92,13 +90,14 @@ const IntroduceDescription = styled.span`
   white-space: pre-line;
 
   line-height: 2.3rem;
+
+  display: inline-block;
 `;
 
 
 const CoffeeImage = styled.img`
   padding: 20px 0px;
   width: 100%;
-  word-break: keep-all;
 `;
 
 
@@ -134,13 +133,6 @@ const Resume: React.FC = () => {
             </Introduce>
           </Profile>
 
-          <Profile>
-            <IntroduceTitle>{t("resume.introduce_title")}</IntroduceTitle>
-            <Introduce>
-              <IntroduceDescription>{t("resume.introduce_description")}</IntroduceDescription>
-              <CoffeeImage src={Coffee} alt="latte" />
-            </Introduce>
-          </Profile>
         </Content>
       </Container>
     </Scrollbar>
