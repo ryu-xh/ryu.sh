@@ -65,6 +65,18 @@ const Profile = styled.div`
   }
 `;
 
+const SubProfile = styled.div`
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
+
 
 const Introduce = styled.span`
   flex: 1;  
@@ -78,16 +90,30 @@ const Introduce = styled.span`
 
 const IntroduceTitle = styled.span`
   font-size: 1.4rem;
-  font-weight: 800;
+  font-weight: 600;
   padding: 0.2rem 2rem 1rem 0px;
 
   transition: all 0.3s ease-in-out;
+
+  white-space: pre-line;
 
   @media (min-width: 768px) {
     font-size: 1.6rem;
     padding-right: 4rem;
   }
+`;
 
+const SubIntroduceTitle = styled.span`
+  font-size: 1rem;
+  font-weight: 400;
+  
+  transition: all 0.3s ease-in-out;
+
+  white-space: pre-line;
+  
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const IntroduceDescription = styled.span`
@@ -105,6 +131,23 @@ const CoffeeImage = styled.img`
   width: 100%;
 `;
 
+const SkillContainer = styled.div`
+
+`;
+
+const SkillUl = styled.ul`
+  margin: 0px;
+`;
+
+const SkillList = styled.li`
+  font-size: 1.1rem;
+  padding: 5px 0px;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+
+  }
+`;
 
 
 const Resume: React.FC = () => {
@@ -141,18 +184,29 @@ const Resume: React.FC = () => {
           <Profile>
             <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
             <Introduce>
-              
-              
+
+
             </Introduce>
           </Profile>
 
-          <Profile>
+          <SkillContainer>
             <IntroduceTitle>{t("resume.skill_title")}</IntroduceTitle>
-            <Introduce>
-              
-              
-            </Introduce>
-          </Profile>
+            <SubProfile>
+              <SubIntroduceTitle>{t("resume.skill_frontend_title")}</SubIntroduceTitle>
+              <SkillUl>
+                <SkillList>React(Typescript)</SkillList>
+                <SkillList>React Native(Typescript)</SkillList>
+              </SkillUl>
+            </SubProfile>
+            <SubProfile>
+              <SubIntroduceTitle>{t("resume.skill_backend_title")}</SubIntroduceTitle>
+              <SkillUl>
+                <SkillList>Django(Python)</SkillList>
+                <SkillList>Node(Javascript)</SkillList>
+              </SkillUl>
+            </SubProfile>
+          </SkillContainer>
+
 
         </Content>
       </Container>
