@@ -36,7 +36,7 @@ const ContentHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px;
+  padding: 50px 0px;
 `;
 
 const ProfileIcon = styled.img`
@@ -54,7 +54,7 @@ const ProfileIcon = styled.img`
 `;
 
 const Profile = styled.div`
-  padding: 120px 0px;
+  padding: 30px 0px;
   display: flex;
   flex-direction: row;
 `;
@@ -75,6 +75,7 @@ const Introduce = styled.span`
 const IntroduceTitle = styled.span`
   font-size: 1.4rem;
   font-weight: 700;
+  padding-top: 0.2rem;
   padding-right: 2rem;
 
   transition: all 0.3s ease-in-out;
@@ -131,7 +132,14 @@ const Resume: React.FC = () => {
               <IntroduceDescription>{t("resume.introduce_description")}</IntroduceDescription>
               <CoffeeImage src={Coffee} alt="latte" />
             </Introduce>
+          </Profile>
 
+          <Profile>
+            <IntroduceTitle>{t("resume.introduce_title")}</IntroduceTitle>
+            <Introduce>
+              <IntroduceDescription>{t("resume.introduce_description")}</IntroduceDescription>
+              <CoffeeImage src={Coffee} alt="latte" />
+            </Introduce>
           </Profile>
         </Content>
       </Container>
