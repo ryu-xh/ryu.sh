@@ -14,7 +14,7 @@ const Container = styled.div`
 const Content = styled.div`
   margin: auto;
   max-width: 768px;
-  padding: 100px 2rem;
+  padding: 100px 1.5rem;
 `;
 
 const Title = styled.span`
@@ -41,8 +41,8 @@ const ContentHeader = styled.div`
 
 const ProfileIcon = styled.img`
   border-radius: 50%;
-  width: 5.5em;
-  height: 5.5em;
+  width: 27vw;
+  height: 27vw;
   transition: all 0.3s ease-in-out;
 
   -webkit-user-drag: none;
@@ -56,7 +56,13 @@ const ProfileIcon = styled.img`
 const Profile = styled.div`
   padding: 30px 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 
@@ -72,9 +78,8 @@ const Introduce = styled.span`
 
 const IntroduceTitle = styled.span`
   font-size: 1.4rem;
-  font-weight: 700;
-  padding-top: 0.2rem;
-  padding-right: 2rem;
+  font-weight: 800;
+  padding: 0.2rem 2rem 1rem 0px;
 
   transition: all 0.3s ease-in-out;
 
@@ -130,6 +135,22 @@ const Resume: React.FC = () => {
             <Introduce>
               <IntroduceDescription>{t("resume.introduce_description")}</IntroduceDescription>
               <CoffeeImage src={Coffee} alt="latte" />
+            </Introduce>
+          </Profile>
+
+          <Profile>
+            <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
+            <Introduce>
+              
+              
+            </Introduce>
+          </Profile>
+
+          <Profile>
+            <IntroduceTitle>{t("resume.skill_title")}</IntroduceTitle>
+            <Introduce>
+              
+              
             </Introduce>
           </Profile>
 
