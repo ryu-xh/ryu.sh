@@ -88,7 +88,7 @@ const Introduce = styled.span`
 `;
 
 const IntroduceTitle = styled.span`
-  width: 110px;
+  width: 130px;
   font-size: 1.4rem;
   font-weight: 600;
   padding: 0.2rem 0px 1rem 0px;
@@ -112,7 +112,7 @@ const SubIntroduceTitle = styled.span`
   white-space: pre-line;
 
   @media (min-width: 768px) {
-    width: 110px;
+    width: 130px;
     font-size: 1.1rem;
   }
 `;
