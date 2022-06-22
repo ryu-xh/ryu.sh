@@ -5,11 +5,12 @@ import Resume from './views/Resume';
 
 const AppRouter: React.FC = () => {
 	return (
-		<BrowserRouter >
-			<Routes>
-				<Route path="/resume" element={<Resume />} />
-			</Routes>
-		</BrowserRouter>
+		<Resume />
+		// <BrowserRouter >
+		// 	<Routes>
+		// 		<Route path="/resume" element={<Resume />} />
+		// 	</Routes>
+		// </BrowserRouter>
 	);
 };
 
