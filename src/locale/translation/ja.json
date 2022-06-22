@@ -3,12 +3,30 @@
     "title": "こんにちは\nヨムと申します。",
 
     "introduce_title": "紹介",
-    "introduce_description": "私はみんなが読みやすいコードを書くのが好きです。\n最近はReactJSを使ってフロントエンドをDjangoを使ってバックエンドをやっています。\nそしていつも楽しそうな物を作ってます。\n\n一緒にコーヒーいっぱい飲みながらお話できればいいと思ってます。",
-
-    "skill_title": "技術",
+    "introduce_description": "私はウェブアプリケーションを作るのが好きで、効率的なコード品質向上に興味を持っています。\n最近はReactJSを使ってフロントエンドをDjangoを使ってバックエンドをやっています。\nそしていつも面白そうな物を作っています。\n\n一緒にコーヒーいっぱい飲みながらお話できればいいと思ってます。",
 
     "experience_title": "職歴",
+    "experience_working": "現在",
+
+    "company_team_mypacer": "チーム・マイペーサー",
+    "position_fullstack_engineer": "フルスタックエンジニア",
+
+    "company_team_unstablers": "チーム・アンスタブラーズ",
+    "position_backend_engineer": "バックエンドエンジニア",
+
+    "company_starbucks": "スターバックス",
+    "position_barista": "バラスター",
+
+    "educational_experience_title": "学歴",
+    "educational_experience_highschool_name": "議政府高校",
+    "educational_experience_highschool_object": "理系",
+    "educational_experience_college_name": "新安山大学",
+    "educational_experience_college_object": "コンピューター情報科",
+    "educational_experience_graduation": "卒業",
+
+    "skill_title": "技術",
     "skill_frontend_title": "フロント\nエンド",
-    "skill_backend_title": "バック\nエンド"
+    "skill_backend_title": "バック\nエンド",
+    "skill_client_title": "クライアント"
   }
 }

@@ -3,12 +3,30 @@
     "title": "안녕하세요.\n저는 염석현 입니다.",
 
     "introduce_title": "소개",
-    "introduce_description": "저는 모두가 보기 좋은 코드를 작성하는 것을 좋아합니다.\n요즘은 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.\n그리고 항상 즐거운 것들을 개발하고 있어요.\n\n함께 커피 한잔 마시면서 이야기를 하고 싶어요.",
-    
+    "introduce_description": "저는 백엔드와 프론트엔드 개발을 좋아하고, 효율적인 코드 품질 향상에 관심이 많습니다.\n주로 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.\n그리고 항상 재미있는 것들을 개발하고 있어요.\n\n함께 커피 한잔 마시면서 이야기를 하고 싶어요.",
+
     "experience_title": "경력",
+    "experience_working": "현재",
+
+    "company_team_mypacer": "팀 마이페이서",
+    "position_fullstack_engineer": "풀스택 엔지니어",
+
+    "company_team_unstablers": "팀 언스테이블러즈",
+    "position_backend_engineer": "백엔드 엔지니어",
+
+    "company_starbucks": "스타벅스",
+    "position_barista": "바리스타",
+
+    "educational_experience_title": "학력",
+    "educational_experience_highschool_name": "의정부고등학교",
+    "educational_experience_highschool_object": "이과",
+    "educational_experience_college_name": "신안산대학교",
+    "educational_experience_college_object": "컴퓨터정보과",
+    "educational_experience_graduation": "졸업",
 
     "skill_title": "기술",
     "skill_frontend_title": "프론트엔드",
-    "skill_backend_title": "백엔드"
+    "skill_backend_title": "백엔드",
+    "skill_client_title": "클라이언트"
   }
 }
