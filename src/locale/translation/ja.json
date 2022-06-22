@@ -10,23 +10,42 @@
 
     "company_team_mypacer": "チーム・マイペーサー",
     "position_fullstack_engineer": "フルスタックエンジニア",
+    "company_team_mypacer_description": "React Nativeでランニングアプリケーションを開発しました。\nTypescriptを使ってタイプエラーを最小化しようと努力しmobxを使って全体的な状態を導入しました。\nバックエンドはDjangoとDjango Rest Frameworkを使ってAPIを作成し、テストコードを作成しエラーを最小化しようと努力しました。同時にGithub Actionsを使ってPull Requestのときにエラーがあるかをいつも検証しようとしました。\nJenkinsとFastlaneを使ってアプリケーションのビルド時間を短縮しようとCI/CDを構成しました。",
 
     "company_team_unstablers": "チーム・アンスタブラーズ",
     "position_backend_engineer": "バックエンドエンジニア",
+    "company_team_unstabler_description": "NextJSを使ってフロントエンド画面構成とREST APIを連携、NestJSとTypeORMを使ってバックエンドを作成しました。",
 
     "company_starbucks": "スターバックス",
     "position_barista": "バラスター",
+    "company_starbucks_description": "お店に定期的に指定された音声ファイルを放送できるコロナ案内ソフトウェアを開発しました。\n.Net FrameworkとC#を使って開発しました。",
 
     "educational_experience_title": "学歴",
     "educational_experience_highschool_name": "議政府高校",
     "educational_experience_highschool_object": "理系",
     "educational_experience_college_name": "新安山大学",
     "educational_experience_college_object": "コンピューター情報科",
+    "educational_experience_college_description": "React Nativeを使って学校生活に役立つアプリケーションを開発しました。\nOpenframeworksとC++を使ってMacOS環境とWindows環境の上で動作する音楽ゲームを開発しました。",
+
     "educational_experience_graduation": "卒業",
 
-    "skill_title": "技術",
+    "skill_title": "スキル",
     "skill_frontend_title": "フロント\nエンド",
     "skill_backend_title": "バック\nエンド",
-    "skill_client_title": "クライアント"
+    "skill_etc_title": "その他",
+
+    "award_title": "受賞",
+
+    "award_netmarble_title": "ネットマーブルゲームアカデミー2期",
+    "award_netmarble_sub": "優秀賞",
+    "award_netmarble_description": "チームNAEXUNで参加してOpenFrameworksとC++を使って音楽ゲームを開発しました。",
+
+    "award_appjam11_title": "AppJam 11回",
+    "award_appjam11_sub": "奨励賞",
+    "award_appjam11_description": "ミニマリズムというテーマで「デットラインカウンター」という自分の業務に集中を手伝うWindows10用アプリケーションを作りました。",
+
+    "award_appjam10_title": "AppJam 10回",
+    "award_appjam10_sub": "最優秀賞",
+    "award_appjam10_description": "チームWierで参加して投票式悩み相談アプリケーションを作りました。"
   }
 }

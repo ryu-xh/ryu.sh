@@ -1,6 +1,6 @@
 import React from "react";
-import {Scrollbar} from "smooth-scrollbar-react";
-import {useTranslation} from "react-i18next";
+import { Scrollbar } from "smooth-scrollbar-react";
+import { useTranslation } from "react-i18next";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
@@ -80,10 +80,11 @@ const SubProfile = styled.div`
 const Introduce = styled.span`
   flex: 1;
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 1.4em;
 
   @media (min-width: 768px) {
     font-size: 1.2rem;
+    line-height: 1.6em;
   }
 `;
 
@@ -103,9 +104,11 @@ const IntroduceTitle = styled.span`
 `;
 
 const SubIntroduceTitle = styled.span`
-  width: 80px;
+  padding-top: 0.2rem;
+  width: 90px;
   font-size: 1rem;
   font-weight: 400;
+  padding-bottom: 0.3rem;
 
   transition: all 0.3s ease-in-out;
 
@@ -118,12 +121,19 @@ const SubIntroduceTitle = styled.span`
 `;
 
 const IntroduceDescription = styled.span`
-  font-size: 1.2rem;
+  font-size: 1rem;
   white-space: pre-line;
 
-  line-height: 2.3rem;
+  line-height: 1.4em;
 
-  display: inline-block;
+  &&:lang(ko) {
+  word-break: keep-all;
+  }
+  
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.6em;
+  }
 `;
 
 const CoffeeImage = styled.img`
@@ -136,42 +146,38 @@ const ExperienceContainer = styled.div`
 `;
 
 const ExperienceSubContainer = styled(SubProfile)`
-  padding: 10px 0px;
+  padding: 15px 0px 20px 0px;
   flex-direction: row;
-`;
-
-const CompanyDescription = styled.div`
-flex: 1;
 `;
 
 const Company = styled.div`
   font-size: 1rem;
-  font-weight: 600;
-  align-items: center;
+  font-weight: 700;
   display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
 
   transition: all 0.3s ease-in-out;
 
   @media (min-width: 768px) {
+    align-items: center;
+    flex-direction: row;
     font-size: 1.3rem;
   }
 `;
 
 const Position = styled.span`
-  padding-left: 0.3rem;
   font-size: 0.8rem;
   font-weight: 400;
 
   transition: 0.3s all ease-in-out;
 
   @media (min-width: 768px) {
+    padding-left: 0.3rem;
     padding-left: 0.8rem;
     font-size: 0.9rem;
   }
-`;
-
-const Status = styled(Position)`
-
 `;
 
 const SkillContainer = styled.div`
@@ -180,20 +186,47 @@ const SkillContainer = styled.div`
 
 const SkillUl = styled.ul`
   margin: 0px;
-  padding: 0px;
+  padding-left: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding: 0px;
+  }
 `;
 
 const SkillList = styled.li`
   font-size: 1.1rem;
-  padding: 5px 0px;
+  padding-bottom: 10px;
+  align-items: center;
 
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
 `;
 
+const SubSkill = styled.span`
+  font-size: 1rem;
+  flex: 1;
+`;
+
+const AwardContainer = styled.div`
+  padding: 30px 0px;
+`;
+
+const NewsTag = styled.a`
+  color: #FFF;
+  text-decoration: underline;
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #111;
+    background-color: #FFF;
+    text-decoration: none;
+  }
+`;
+
 const Resume: React.FC = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Scrollbar>
@@ -231,71 +264,43 @@ const Resume: React.FC = () => {
                 2021.11 ~ <br />
                 {t("resume.experience_working")}
               </SubIntroduceTitle>
-              <div>
+              <Introduce>
                 <Company>
                   {t("resume.company_team_mypacer")}<Position>{t("resume.position_fullstack_engineer")}</Position>
                 </Company>
-                <div>
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                </div>
-              </div>
+                <IntroduceDescription>
+                  {t("resume.company_team_mypacer_description")}
+                </IntroduceDescription>
+              </Introduce>
             </ExperienceSubContainer>
             <ExperienceSubContainer>
               <SubIntroduceTitle>
                 2021.05 ~ <br />
                 2021.10
               </SubIntroduceTitle>
-              <CompanyDescription>
+              <Introduce>
                 <Company>
                   {t("resume.company_team_unstablers")}<Position>{t("resume.position_backend_engineer")}</Position>
                 </Company>
-                <div>
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                </div>
-              </CompanyDescription>
+                <IntroduceDescription>
+                  {t("resume.company_team_unstabler_description")}
+                </IntroduceDescription>
+              </Introduce>
             </ExperienceSubContainer>
             <ExperienceSubContainer>
               <SubIntroduceTitle>
                 2020.01 ~ <br />
                 2021.04
               </SubIntroduceTitle>
-              <CompanyDescription>
+              <Introduce>
                 <Company>
-                  {t("resume.company_starbucks")}<Position>{t("resume.position_barista")}</Position>
+                  {t("resume.company_starbucks")}
+                  <Position>{t("resume.position_barista")}</Position>
                 </Company>
-                <div>
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                  주저리
-                  <br />
-                </div>
-              </CompanyDescription>
+                <IntroduceDescription>
+                  {t("resume.company_starbucks_description")}
+                </IntroduceDescription>
+              </Introduce>
             </ExperienceSubContainer>
           </ExperienceContainer>
 
@@ -305,38 +310,37 @@ const Resume: React.FC = () => {
             </IntroduceTitle>
             <ExperienceSubContainer>
               <SubIntroduceTitle>
-                2015.03 ~ <br />
-                2018.02
-              </SubIntroduceTitle>
-              <div>
-                <Company>
-                  {t("resume.educational_experience_highschool_name")}
-                  <Position>
-                    {t("resume.educational_experience_highschool_object")}
-                  </Position>
-                  <Status>
-                    {t("resume.educational_experience_graduation")}
-                  </Status>
-                </Company>
-              </div>
-            </ExperienceSubContainer>
-            <ExperienceSubContainer>
-              <SubIntroduceTitle>
                 2018.03 ~ <br />
                 2020.02
               </SubIntroduceTitle>
-              <div>
+              <Introduce>
                 <Company>
                   {t("resume.educational_experience_college_name")}
                   <Position>
                     {t("resume.educational_experience_college_object")}
                   </Position>
-                  <Status>
-                    {t("resume.educational_experience_graduation")}
-                  </Status>
                 </Company>
-              </div>
+                <IntroduceDescription>
+                  {t("resume.educational_experience_college_description")}
+                </IntroduceDescription>
+              </Introduce>
             </ExperienceSubContainer>
+
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>
+                2015.03 ~ <br />
+                2018.02
+              </SubIntroduceTitle>
+              <Introduce>
+                <Company>
+                  {t("resume.educational_experience_highschool_name")}
+                  <Position>
+                    {t("resume.educational_experience_highschool_object")}
+                  </Position>
+                </Company>
+              </Introduce>
+            </ExperienceSubContainer>
+
           </ExperienceContainer>
 
           <SkillContainer>
@@ -346,8 +350,8 @@ const Resume: React.FC = () => {
                 {t("resume.skill_frontend_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>React (Typescript)</SkillList>
-                <SkillList>React Native (Typescript)</SkillList>
+                <SkillList>React <SubSkill>(Typescript)</SubSkill></SkillList>
+                <SkillList>React Native <SubSkill>(Typescript)</SubSkill></SkillList>
               </SkillUl>
             </SubProfile>
             <SubProfile>
@@ -355,19 +359,80 @@ const Resume: React.FC = () => {
                 {t("resume.skill_backend_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>Django (Python)</SkillList>
-                <SkillList>Node (Javascript)</SkillList>
+                <SkillList>Django <SubSkill>(Python)</SubSkill></SkillList>
+                <SkillList>Node <SubSkill>(Javascript)</SubSkill></SkillList>
               </SkillUl>
             </SubProfile>
             <SubProfile>
               <SubIntroduceTitle>
-                {t("resume.skill_client_title")}
+                {t("resume.skill_etc_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>Windows Presentation Foundation(C#)</SkillList>
+                <SkillList>Windows Presentation Foundation <SubSkill>(C#)</SubSkill></SkillList>
+                <SkillList>Git</SkillList>
               </SkillUl>
             </SubProfile>
           </SkillContainer>
+
+          <AwardContainer>
+            <IntroduceTitle>{t("resume.award_title")}</IntroduceTitle>
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>
+                2018.01
+              </SubIntroduceTitle>
+              <Introduce>
+                <Company>
+                  <NewsTag href={"https://www.thisisgame.com/webzine/news/nboard/4/?n=79130"}>
+                    {t("resume.award_netmarble_title")}
+                  </NewsTag>
+                  <Position>
+                    {t("resume.award_netmarble_sub")}
+                  </Position>
+                </Company>
+                <IntroduceDescription>
+                  {t("resume.award_netmarble_description")}
+                </IntroduceDescription>
+              </Introduce>
+            </ExperienceSubContainer>
+
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>
+                2016.07
+              </SubIntroduceTitle>
+              <Introduce>
+                <Company>
+                  <NewsTag href={"https://www.donga.com/news/article/all/20160724/79378351/1"}>
+                    {t("resume.award_appjam11_title")}
+                  </NewsTag>
+                  <Position>
+                    {t("resume.award_appjam11_sub")}
+                  </Position>
+                </Company>
+                <IntroduceDescription>
+                  {t("resume.award_appjam11_description")}
+                </IntroduceDescription>
+              </Introduce>
+            </ExperienceSubContainer>
+
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>
+                2016.03
+              </SubIntroduceTitle>
+              <Introduce>
+                <Company>
+                  <NewsTag href={"https://www.donga.com/news/article/all/20160328/77261138/1"}>
+                    {t("resume.award_appjam10_title")}
+                  </NewsTag>
+                  <Position>
+                    {t("resume.award_appjam10_sub")}
+                  </Position>
+                </Company>
+                <IntroduceDescription>
+                  {t("resume.award_appjam10_description")}
+                </IntroduceDescription>
+              </Introduce>
+            </ExperienceSubContainer>
+          </AwardContainer>
         </Content>
       </Container>
     </Scrollbar>

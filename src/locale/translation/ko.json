@@ -10,23 +10,41 @@
 
     "company_team_mypacer": "팀 마이페이서",
     "position_fullstack_engineer": "풀스택 엔지니어",
+    "company_team_mypacer_description": "React Native로 러닝 어플리케이션을 개발하였습니다.\nTypescript를 사용하여 타입 오류를 최소화하려고 노력하고 mobx를 사용하여 전체적인 상태 관리를 하였습니다.\n백엔드는 Django와 Django Rest Framework를 사용하여 API를 제작하였고, 테스트 코드를 작성하여 오류를 최소화하려고 노력했습니다. 동시에 Github Actions를 사용하여 Pull Request시에 오류가 있는지를 항상 검증하도록 하였습니다.\nJenkins와 Fastlane을 사용하여 어플리케이션의 빌드 시간을 단축하기 위해 CI/CD를 구성하였습니다.",
 
     "company_team_unstablers": "팀 언스테이블러즈",
     "position_backend_engineer": "백엔드 엔지니어",
+    "company_team_unstabler_description": "NextJS를 사용하여 프론트엔드 화면 구성과 REST API 연동, NestJS, TypeORM을 사용한 백엔드를 구성 및 작성하였습니다.",
 
     "company_starbucks": "스타벅스",
     "position_barista": "바리스타",
+    "company_starbucks_description": "매장에 정기적으로 지정된 음성 파일을 송출할 수 있는 코로나 안내 방송 소프트웨어를 개발하였습니다.\n.Net Framework와 C#을 사용하여 개발하였습니다.\n매장을 설정하면 해당 매장의 운영일을 파싱해와 매장을 고려하여 개점 이전과 폐점 이후에는 음성 파일을 재생시키지 않도록 하였습니다.\n또, 오디오 장치를 설정하는 기능을 추가하여 조작중인 컴퓨터의 시스템 소리 등이 재생되는 것을 방지하였습니다.",
 
     "educational_experience_title": "학력",
     "educational_experience_highschool_name": "의정부고등학교",
     "educational_experience_highschool_object": "이과",
     "educational_experience_college_name": "신안산대학교",
     "educational_experience_college_object": "컴퓨터정보과",
+    "educational_experience_college_description": "React Native를 사용하여 학업을 관리하는 어플리케이션을 개발하였습니다.\nOpenframeworks와 C++을 사용하여 맥OS 환경과 윈도우즈 환경에서 동작하는 리듬게임을 개발하였습니다.",
+
     "educational_experience_graduation": "졸업",
 
-    "skill_title": "기술",
+    "skill_title": "스킬",
     "skill_frontend_title": "프론트엔드",
     "skill_backend_title": "백엔드",
-    "skill_client_title": "클라이언트"
+    "skill_etc_title": "이 외",
+
+    "award_title": "수상",
+    "award_netmarble_title": "넷마블게임아카데미 2기",
+    "award_netmarble_sub": "우수상",
+    "award_netmarble_description": "팀 NAEXUN으로 참가하여 리듬게임을 OpenFrameworks와 C++를 사용하여 개발하였습니다.",
+
+    "award_appjam11_title": "AppJam 11회",
+    "award_appjam11_sub": "장려상",
+    "award_appjam11_description": "미니멀리즘이라는 주제로 데드라인 카운터라는 나의 업무에 집중하는 Windows10 모바일 어플리케이션을 개발하였습니다.",
+
+    "award_appjam10_title": "AppJam 10회",
+    "award_appjam10_sub": "최우수상",
+    "award_appjam10_description": "팀 위어로 참가하여 투표형 고민상담 안드로이드 어플리케이션 위어드를 개발하였습니다."
   }
 }
