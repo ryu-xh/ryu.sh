@@ -46,6 +46,9 @@
 
     "award_appjam10_title": "AppJam 10回",
     "award_appjam10_sub": "最優秀賞",
-    "award_appjam10_description": "チームWierで参加して投票式悩み相談アプリケーションを作りました。"
+    "award_appjam10_description": "チームWierで参加して投票式悩み相談アプリケーションを作りました。",
+
+    "others_title": "その他",
+    "others_github": "GitHub"
   }
 }

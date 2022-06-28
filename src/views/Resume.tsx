@@ -225,6 +225,23 @@ const NewsTag = styled.a`
   }
 `;
 
+const OthersContainer = styled.div`
+  padding: 30px 0px;
+`;
+
+const GithubLink = styled.a`
+  color: #FFF;
+  text-decoration: underline;
+
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #111;
+    background-color: #FFF;
+    text-decoration: none;
+  }
+`;
+
 const Resume: React.FC = () => {
   const { t } = useTranslation();
 
@@ -433,6 +450,15 @@ const Resume: React.FC = () => {
               </Introduce>
             </ExperienceSubContainer>
           </AwardContainer>
+
+          <OthersContainer>
+            <IntroduceTitle>{t("resume.others_title")}</IntroduceTitle>
+            <SubProfile>
+              <SubIntroduceTitle>
+                <GithubLink href="https://github.com/ryuuseikang">{t("resume.others_github")}</GithubLink>
+              </SubIntroduceTitle>
+              </SubProfile>
+          </OthersContainer>
         </Content>
       </Container>
     </Scrollbar>
