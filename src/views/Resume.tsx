@@ -41,15 +41,15 @@ const ContentHeader = styled.div`
 
 const ProfileIcon = styled.img`
   border-radius: 50%;
-  width: 27vw;
-  height: 27vw;
+  width: 30vw;
+  height: 30vw;
   transition: all 0.3s ease-in-out;
 
   -webkit-user-drag: none;
 
   @media (min-width: 768px) {
-    width: 12em;
-    height: 12em;
+    width: 16em;
+    height: 16em;
   }
 `;
 
@@ -278,8 +278,22 @@ const Resume: React.FC = () => {
             <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
             <ExperienceSubContainer>
               <SubIntroduceTitle>
-                2021.11 ~ <br />
+                2022.08 ~ <br />
                 {t("resume.experience_working")}
+              </SubIntroduceTitle>
+              <Introduce>
+                <Company>
+                  {t("resume.company_scalardata")}<Position>{t("resume.position_frontend_engineer")}</Position>
+                </Company>
+                <IntroduceDescription>
+                  {t("resume.company_scalardata_description")}
+                </IntroduceDescription>
+              </Introduce>
+            </ExperienceSubContainer>
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>
+                2021.11 ~ <br />
+                2022.08
               </SubIntroduceTitle>
               <Introduce>
                 <Company>

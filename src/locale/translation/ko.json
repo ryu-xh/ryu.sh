@@ -1,12 +1,16 @@
 {
   "resume": {
-    "title": "안녕하세요.\n저는 염석현입니다.",
+    "title": "안녕하세요.\n저는 RYU입니다.",
 
     "introduce_title": "소개",
     "introduce_description": "저는 백엔드와 프론트엔드 개발을 좋아하고, 효율적인 코드 품질 향상에 관심이 많습니다.\n주로 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.\n그리고 항상 재미있는 것들을 개발하고 있어요. 예를 들면 오픈소스로 개발되는 음성 합성 프로그램(OpenUtau)에 기여를 해요.\n\n함께 커피 한잔 마시면서 이야기를 하고 싶어요.",
 
     "experience_title": "경력",
     "experience_working": "현재",
+
+    "company_scalardata": "스칼라데이터",
+    "position_frontend_engineer": "프론트엔드 엔지니어",
+    "company_scalardata_description": "React Native를 사용한 어플리케이션의 API 통합과 리팩토링을 했습니다.\n주로 앱 내에서 필요한 모듈 및 구조 설계를 담당했습니다.\nSwift를 사용한 iOS용 iBeacon 네이티브 모듈 개발\nKotlin을 사용한 Android 교통카드 호환 NFC 모듈 개발\nNextJS를 사용하여 어플리케이션과 함께 동작하는 웹페이지 개발\nTeamCity를 통해 Staging과 Production 빌드를 배포할 수 있도록 CI/CD 구성",
 
     "company_team_mypacer": "팀 마이페이서",
     "position_fullstack_engineer": "풀스택 엔지니어",
