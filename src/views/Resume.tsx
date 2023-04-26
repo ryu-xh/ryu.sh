@@ -383,6 +383,7 @@ const Resume: React.FC = () => {
               <SkillUl>
                 <SkillList>React <SubSkill>(Typescript)</SubSkill></SkillList>
                 <SkillList>React Native <SubSkill>(Typescript)</SubSkill></SkillList>
+                <SkillList>NextJS <SubSkill>(Typescript)</SubSkill></SkillList>
               </SkillUl>
             </SubProfile>
             <SubProfile>
