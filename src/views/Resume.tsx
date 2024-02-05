@@ -297,7 +297,7 @@ const Resume: React.FC = () => {
               </SubIntroduceTitle>
               <Introduce>
                 <Company>
-                  {t("resume.company_team_mypacer")}<Position>{t("resume.position_fullstack_engineer")}</Position>
+                  {t("resume.company_palzak_corporation")}<Position>{t("resume.position_fullstack_engineer")}</Position>
                 </Company>
                 <IntroduceDescription>
                   {t("resume.company_team_mypacer_description")}
