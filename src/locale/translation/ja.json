@@ -12,7 +12,7 @@
     "position_frontend_engineer": "フロントエンドエンジニア",
     "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI通合とリファクタリングをしました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
 
-    "company_team_mypacer": "チーム・マイペーサー",
+    "company_palzak_corporation": "palzak corporation",
     "position_fullstack_engineer": "フルスタックエンジニア",
     "company_team_mypacer_description": "React Nativeでランニングアプリケーションを開発しました。\nTypescriptを使ってタイプエラーを最小化しようと努力しmobxを使って全体的な状態を導入しました。\nバックエンドはDjangoとDjango Rest Frameworkを使ってAPIを作成し、テストコードを作成しエラーを最小化しようと努力しました。同時にGithub Actionsを使ってPull Requestのときにエラーがあるかをいつも検証しようとしました。\nJenkinsとFastlaneを使ってアプリケーションのビルド時間を短縮しようとCI/CDを構成しました。",
 
