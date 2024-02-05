@@ -12,7 +12,7 @@
     "position_frontend_engineer": "프론트엔드 엔지니어",
     "company_scalardata_description": "React Native를 사용한 어플리케이션의 API 통합과 리팩토링을 했습니다.\n주로 앱 내에서 필요한 모듈 및 구조 설계를 담당했습니다.\nSwift를 사용한 iOS용 iBeacon 네이티브 모듈 개발\nKotlin을 사용한 Android 교통카드 호환 NFC 모듈 개발\nNextJS를 사용하여 어플리케이션과 함께 동작하는 웹페이지 개발\nTeamCity를 통해 Staging과 Production 빌드를 배포할 수 있도록 CI/CD 구성",
 
-    "company_team_mypacer": "팀 마이페이서",
+    "company_palzak_corporation": "팔짝코퍼레이션",
     "position_fullstack_engineer": "풀스택 엔지니어",
     "company_team_mypacer_description": "React Native로 러닝 어플리케이션을 개발하였습니다.\nTypescript를 사용하여 타입 오류를 최소화하려고 노력하고 mobx를 사용하여 전체적인 상태 관리를 하였습니다.\n백엔드는 Django와 Django Rest Framework를 사용하여 API를 제작하였고, 테스트 코드를 작성하여 오류를 최소화하려고 노력했습니다. 동시에 Github Actions를 사용하여 Pull Request시에 오류가 있는지를 항상 검증하도록 하였습니다.\nJenkins와 Fastlane을 사용하여 어플리케이션의 빌드 시간을 단축하기 위해 CI/CD를 구성하였습니다.",
 
