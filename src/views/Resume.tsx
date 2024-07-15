@@ -4,8 +4,9 @@ import { useTranslation } from "react-i18next";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
-import Coffee from "../assets/coffee.jpg";
-import Self from "../assets/self.png";
+import Coffee from "../assets/coffee.webp";
+import Self from "../assets/self.webp";
+import dayjs from "dayjs";
 
 const Container = styled.div`
   display: block;
@@ -14,7 +15,7 @@ const Container = styled.div`
 const Content = styled.div`
   margin: auto;
   max-width: 768px;
-  padding: 100px 1.5rem;
+  padding: 100px 2.5rem;
 `;
 
 const Title = styled.span`
@@ -36,7 +37,7 @@ const ContentHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0px;
+  padding: 50px 0;
 `;
 
 const ProfileIcon = styled.img`
@@ -54,7 +55,7 @@ const ProfileIcon = styled.img`
 `;
 
 const Profile = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
 
@@ -66,7 +67,7 @@ const Profile = styled.div`
 `;
 
 const SubProfile = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
 
@@ -92,7 +93,7 @@ const IntroduceTitle = styled.span`
   width: 130px;
   font-size: 1.4rem;
   font-weight: 600;
-  padding: 0.2rem 0px 1rem 0px;
+  padding: 0.2rem 0 1rem 0;
 
   transition: all 0.3s ease-in-out;
 
@@ -105,7 +106,7 @@ const IntroduceTitle = styled.span`
 
 const SubIntroduceTitle = styled.span`
   padding-top: 0.2rem;
-  width: 90px;
+  width: 100px;
   font-size: 1rem;
   font-weight: 400;
   padding-bottom: 0.3rem;
@@ -137,16 +138,16 @@ const IntroduceDescription = styled.span`
 `;
 
 const CoffeeImage = styled.img`
-  padding: 20px 0px;
+  padding: 20px 0;
   width: 100%;
 `;
 
 const ExperienceContainer = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
 `;
 
 const ExperienceSubContainer = styled(SubProfile)`
-  padding: 15px 0px 20px 0px;
+  padding: 15px 0 20px 0;
   flex-direction: row;
 `;
 
@@ -181,15 +182,15 @@ const Position = styled.span`
 `;
 
 const SkillContainer = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
 `;
 
 const SkillUl = styled.ul`
-  margin: 0px;
+  margin: 0;
   padding-left: 1.25rem;
 
   @media (min-width: 768px) {
-    padding: 0px;
+    padding: 0;
   }
 `;
 
@@ -209,7 +210,7 @@ const SubSkill = styled.span`
 `;
 
 const AwardContainer = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
 `;
 
 const NewsTag = styled.a`
@@ -226,7 +227,7 @@ const NewsTag = styled.a`
 `;
 
 const OthersContainer = styled.div`
-  padding: 30px 0px;
+  padding: 30px 0;
 `;
 
 const GithubLink = styled.a`
@@ -244,6 +245,76 @@ const GithubLink = styled.a`
 
 const Resume: React.FC = () => {
   const { t } = useTranslation();
+
+  const renderExperience = () => {
+
+    return (
+      <ExperienceContainer>
+        <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
+        <ExperienceSubContainer>
+          <SubIntroduceTitle>
+            2022.08 ~ <br />
+            {t("resume.experience_working")} <br/>
+            ({t("resume.period_years_months", {years: dayjs().diff('2022-08-08', 'years'), months: dayjs(dayjs().diff(dayjs('2022-08-08'), 'millisecond')).month()})})
+          </SubIntroduceTitle>
+          <Introduce>
+            <Company>
+              {t("resume.company_scalardata")}<Position>{t("resume.position_frontend_engineer")}</Position>
+            </Company>
+            <IntroduceDescription>
+              {t("resume.company_scalardata_description")}
+            </IntroduceDescription>
+          </Introduce>
+        </ExperienceSubContainer>
+        <ExperienceSubContainer>
+          <SubIntroduceTitle>
+            2021.11 ~ <br />
+            2022.08 <br />
+            ({t("resume.preiod_months", { months: dayjs('2022-08-05').diff(dayjs('2021-11-01'), 'month')})})
+          </SubIntroduceTitle>
+          <Introduce>
+            <Company>
+              {t("resume.company_palzak_corporation")}<Position>{t("resume.position_fullstack_engineer")}</Position>
+            </Company>
+            <IntroduceDescription>
+              {t("resume.company_team_mypacer_description")}
+            </IntroduceDescription>
+          </Introduce>
+        </ExperienceSubContainer>
+        <ExperienceSubContainer>
+          <SubIntroduceTitle>
+            2021.05 ~ <br />
+            2021.10 <br />
+            ({t("resume.preiod_months", { months: dayjs('2021-10-31').diff(dayjs('2021-05-01'), 'month')})})
+          </SubIntroduceTitle>
+          <Introduce>
+            <Company>
+              {t("resume.company_team_unstablers")}<Position>{t("resume.position_backend_engineer")}</Position>
+            </Company>
+            <IntroduceDescription>
+              {t("resume.company_team_unstabler_description")}
+            </IntroduceDescription>
+          </Introduce>
+        </ExperienceSubContainer>
+        <ExperienceSubContainer>
+          <SubIntroduceTitle>
+            2020.01 ~ <br />
+            2021.04 <br />
+            ({t("resume.period_years_months", { years: dayjs('2021-04-30').diff(dayjs('2020-01-01'), 'years'), months: dayjs(dayjs('2021-04-30').diff(dayjs('2020-01-01'), 'millisecond')).month()})})
+          </SubIntroduceTitle>
+          <Introduce>
+            <Company>
+              {t("resume.company_starbucks")}
+              <Position>{t("resume.position_barista")}</Position>
+            </Company>
+            <IntroduceDescription>
+              {t("resume.company_starbucks_description")}
+            </IntroduceDescription>
+          </Introduce>
+        </ExperienceSubContainer>
+      </ExperienceContainer>
+    );
+  }
 
   return (
     <Scrollbar>
@@ -274,66 +345,7 @@ const Resume: React.FC = () => {
             </Introduce>
           </Profile>
 
-          <ExperienceContainer>
-            <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
-            <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2022.08 ~ <br />
-                {t("resume.experience_working")}
-              </SubIntroduceTitle>
-              <Introduce>
-                <Company>
-                  {t("resume.company_scalardata")}<Position>{t("resume.position_frontend_engineer")}</Position>
-                </Company>
-                <IntroduceDescription>
-                  {t("resume.company_scalardata_description")}
-                </IntroduceDescription>
-              </Introduce>
-            </ExperienceSubContainer>
-            <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2021.11 ~ <br />
-                2022.08
-              </SubIntroduceTitle>
-              <Introduce>
-                <Company>
-                  {t("resume.company_palzak_corporation")}<Position>{t("resume.position_fullstack_engineer")}</Position>
-                </Company>
-                <IntroduceDescription>
-                  {t("resume.company_team_mypacer_description")}
-                </IntroduceDescription>
-              </Introduce>
-            </ExperienceSubContainer>
-            <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2021.05 ~ <br />
-                2021.10
-              </SubIntroduceTitle>
-              <Introduce>
-                <Company>
-                  {t("resume.company_team_unstablers")}<Position>{t("resume.position_backend_engineer")}</Position>
-                </Company>
-                <IntroduceDescription>
-                  {t("resume.company_team_unstabler_description")}
-                </IntroduceDescription>
-              </Introduce>
-            </ExperienceSubContainer>
-            <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2020.01 ~ <br />
-                2021.04
-              </SubIntroduceTitle>
-              <Introduce>
-                <Company>
-                  {t("resume.company_starbucks")}
-                  <Position>{t("resume.position_barista")}</Position>
-                </Company>
-                <IntroduceDescription>
-                  {t("resume.company_starbucks_description")}
-                </IntroduceDescription>
-              </Introduce>
-            </ExperienceSubContainer>
-          </ExperienceContainer>
+          {renderExperience()}
 
           <ExperienceContainer>
             <IntroduceTitle>
@@ -470,7 +482,7 @@ const Resume: React.FC = () => {
             <IntroduceTitle>{t("resume.others_title")}</IntroduceTitle>
             <SubProfile>
               <SubIntroduceTitle>
-                <GithubLink href="https://github.com/ryuuseikang">{t("resume.others_github")}</GithubLink>
+                <GithubLink href="https://github.com/ryu-xh">{t("resume.others_github")}</GithubLink>
               </SubIntroduceTitle>
               </SubProfile>
           </OthersContainer>

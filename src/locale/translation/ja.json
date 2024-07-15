@@ -3,24 +3,27 @@
     "title": "こんにちは\nRYUと申します。",
 
     "introduce_title": "紹介",
-    "introduce_description": "私はウェブアプリケーションを作るのが好きで、効率的なコード品質向上に興味を持っています。\n最近はReactJSを使ってフロントエンドをDjangoを使ってバックエンドをやっています。\nそしていつも面白そうな物を作っています。\n\n一緒にコーヒーいっぱい飲みながらお話できればいいと思ってます。",
+    "introduce_description": "私は幼少期から技術を通じて問題を解決し、新しいものを創造する過程で得られる達成感から、ソフトウェアエンジニアとしてのキャリアを選びました。\nこの情熱は私を様々なプロジェクトや挑戦に導き、それを通じて着実に成長しています。\n現在、私は韓国に在住しており、そこで多くの技術的な挑戦に取り組んでいます。\n\n一緒にコーヒーいっぱい飲みながらお話できればいいと思ってます。",
 
     "experience_title": "職歴",
     "experience_working": "現在",
 
-    "company_scalardata": "スカラーデータ",
+    "period_years_months": "{{years}}年 {{months}}ヶ月",
+    "preiod_months": "{{months}}ヶ月",
+
+    "company_scalardata": "SCALAR DATA (韓国語：스칼라데이터)",
     "position_frontend_engineer": "フロントエンドエンジニア",
     "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI通合とリファクタリングをしました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
 
-    "company_palzak_corporation": "palzak corporation",
+    "company_palzak_corporation": "PALZAK CORPORATION （韓国語：팔짝코퍼레이션）",
     "position_fullstack_engineer": "フルスタックエンジニア",
     "company_team_mypacer_description": "React Nativeでランニングアプリケーションを開発しました。\nTypescriptを使ってタイプエラーを最小化しようと努力しmobxを使って全体的な状態を導入しました。\nバックエンドはDjangoとDjango Rest Frameworkを使ってAPIを作成し、テストコードを作成しエラーを最小化しようと努力しました。同時にGithub Actionsを使ってPull Requestのときにエラーがあるかをいつも検証しようとしました。\nJenkinsとFastlaneを使ってアプリケーションのビルド時間を短縮しようとCI/CDを構成しました。",
 
-    "company_team_unstablers": "チーム・アンスタブラーズ",
+    "company_team_unstablers": "TEAM UNSTABLERS （韓国語：팀언스테이블러즈）",
     "position_backend_engineer": "バックエンドエンジニア",
     "company_team_unstabler_description": "NextJSを使ってフロントエンド画面構成とREST APIを連携、NestJSとTypeORMを使ってバックエンドを作成しました。",
 
-    "company_starbucks": "スターバックス",
+    "company_starbucks": "スターバックスコーヒーコリア",
     "position_barista": "バラスター",
     "company_starbucks_description": "お店に定期的に指定された音声ファイルを放送できるコロナ案内ソフトウェアを開発しました。\n.Net FrameworkとC#を使って開発しました。",
 

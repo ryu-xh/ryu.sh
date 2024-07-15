@@ -3,10 +3,13 @@
     "title": "안녕하세요.\n저는 RYU입니다.",
 
     "introduce_title": "소개",
-    "introduce_description": "저는 백엔드와 프론트엔드 개발을 좋아하고, 효율적인 코드 품질 향상에 관심이 많습니다.\n주로 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.\n그리고 항상 재미있는 것들을 개발하고 있어요. 예를 들면 오픈소스로 개발되는 음성 합성 프로그램(OpenUtau)에 기여를 해요.\n\n함께 커피 한잔 마시면서 이야기를 하고 싶어요.",
+    "introduce_description": "저는 백엔드와 프론트엔드 개발을 좋아하고, 효율적인 코드 품질 향상에 관심이 많습니다.\n주로 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.\n그리고 항상 재미있는 것들을 개발하고 있어요.\n\n함께 커피 한잔 마시면서 이야기를 하고 싶어요.",
 
     "experience_title": "경력",
     "experience_working": "현재",
+
+    "period_years_months": "{{years}}년 {{months}}개월",
+    "preiod_months": "{{months}}개월",
 
     "company_scalardata": "스칼라데이터",
     "position_frontend_engineer": "프론트엔드 엔지니어",
