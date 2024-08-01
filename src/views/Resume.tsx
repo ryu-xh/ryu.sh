@@ -1,6 +1,6 @@
 import React from "react";
-import { Scrollbar } from "smooth-scrollbar-react";
-import { useTranslation } from "react-i18next";
+import {Scrollbar} from "smooth-scrollbar-react";
+import {useTranslation} from "react-i18next";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
@@ -128,9 +128,9 @@ const IntroduceDescription = styled.span`
   line-height: 1.4em;
 
   &&:lang(ko) {
-  word-break: keep-all;
+    word-break: keep-all;
   }
-  
+
   @media (min-width: 768px) {
     font-size: 1.1rem;
     line-height: 1.6em;
@@ -213,15 +213,15 @@ const AwardContainer = styled.div`
   padding: 30px 0;
 `;
 
-const NewsTag = styled.a`
-  color: #FFF;
+const Link = styled.a`
+  color: #fff;
   text-decoration: underline;
 
   transition: all 0.3s ease-out;
 
   &:hover {
     color: #111;
-    background-color: #FFF;
+    background-color: #fff;
     text-decoration: none;
   }
 `;
@@ -231,35 +231,43 @@ const OthersContainer = styled.div`
 `;
 
 const GithubLink = styled.a`
-  color: #FFF;
+  color: #fff;
   text-decoration: underline;
 
   transition: all 0.3s ease-out;
 
   &:hover {
     color: #111;
-    background-color: #FFF;
+    background-color: #fff;
     text-decoration: none;
   }
 `;
 
 const Resume: React.FC = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const renderExperience = () => {
-
     return (
       <ExperienceContainer>
         <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
         <ExperienceSubContainer>
           <SubIntroduceTitle>
             2022.08 ~ <br />
-            {t("resume.experience_working")} <br/>
-            ({t("resume.period_years_months", {years: dayjs().diff('2022-08-08', 'years'), months: dayjs(dayjs().diff(dayjs('2022-08-08'), 'millisecond')).month()})})
+            {t("resume.experience_working")} <br />(
+            {t("resume.period_years_months", {
+              years: dayjs().diff("2022-08-08", "years"),
+              months: dayjs(
+                dayjs().diff(dayjs("2022-08-08"), "millisecond")
+              ).month(),
+            })}
+            )
           </SubIntroduceTitle>
           <Introduce>
             <Company>
-              {t("resume.company_scalardata")}<Position>{t("resume.position_frontend_engineer")}</Position>
+              <Link href="https://evmodu.kr">
+                {t("resume.company_scalardata")}
+              </Link>
+              <Position>{t("resume.position_frontend_engineer")}</Position>
             </Company>
             <IntroduceDescription>
               {t("resume.company_scalardata_description")}
@@ -269,12 +277,18 @@ const Resume: React.FC = () => {
         <ExperienceSubContainer>
           <SubIntroduceTitle>
             2021.11 ~ <br />
-            2022.08 <br />
-            ({t("resume.preiod_months", { months: dayjs('2022-08-05').diff(dayjs('2021-11-01'), 'month')})})
+            2022.08 <br />(
+            {t("resume.preiod_months", {
+              months: dayjs("2022-08-05").diff(dayjs("2021-11-01"), "month"),
+            })}
+            )
           </SubIntroduceTitle>
           <Introduce>
             <Company>
-              {t("resume.company_palzak_corporation")}<Position>{t("resume.position_fullstack_engineer")}</Position>
+              <Link href="https://www.palzak.co">
+                {t("resume.company_palzak_corporation")}
+              </Link>
+              <Position>{t("resume.position_fullstack_engineer")}</Position>
             </Company>
             <IntroduceDescription>
               {t("resume.company_team_mypacer_description")}
@@ -284,12 +298,18 @@ const Resume: React.FC = () => {
         <ExperienceSubContainer>
           <SubIntroduceTitle>
             2021.05 ~ <br />
-            2021.10 <br />
-            ({t("resume.preiod_months", { months: dayjs('2021-10-31').diff(dayjs('2021-05-01'), 'month')})})
+            2021.10 <br />(
+            {t("resume.preiod_months", {
+              months: dayjs("2021-10-31").diff(dayjs("2021-05-01"), "month"),
+            })}
+            )
           </SubIntroduceTitle>
           <Introduce>
             <Company>
-              {t("resume.company_team_unstablers")}<Position>{t("resume.position_backend_engineer")}</Position>
+              <Link href="https://unstabler.pl">
+                {t("resume.company_team_unstablers")}
+              </Link>
+              <Position>{t("resume.position_backend_engineer")}</Position>
             </Company>
             <IntroduceDescription>
               {t("resume.company_team_unstabler_description")}
@@ -299,8 +319,14 @@ const Resume: React.FC = () => {
         <ExperienceSubContainer>
           <SubIntroduceTitle>
             2020.01 ~ <br />
-            2021.04 <br />
-            ({t("resume.period_years_months", { years: dayjs('2021-04-30').diff(dayjs('2020-01-01'), 'years'), months: dayjs(dayjs('2021-04-30').diff(dayjs('2020-01-01'), 'millisecond')).month()})})
+            2021.04 <br />(
+            {t("resume.period_years_months", {
+              years: dayjs("2021-04-30").diff(dayjs("2020-01-01"), "years"),
+              months: dayjs(
+                dayjs("2021-04-30").diff(dayjs("2020-01-01"), "millisecond")
+              ).month(),
+            })}
+            )
           </SubIntroduceTitle>
           <Introduce>
             <Company>
@@ -314,7 +340,7 @@ const Resume: React.FC = () => {
         </ExperienceSubContainer>
       </ExperienceContainer>
     );
-  }
+  };
 
   return (
     <Scrollbar>
@@ -383,7 +409,6 @@ const Resume: React.FC = () => {
                 </Company>
               </Introduce>
             </ExperienceSubContainer>
-
           </ExperienceContainer>
 
           <SkillContainer>
@@ -393,9 +418,15 @@ const Resume: React.FC = () => {
                 {t("resume.skill_frontend_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>React <SubSkill>(Typescript)</SubSkill></SkillList>
-                <SkillList>React Native <SubSkill>(Typescript)</SubSkill></SkillList>
-                <SkillList>NextJS <SubSkill>(Typescript)</SubSkill></SkillList>
+                <SkillList>
+                  React <SubSkill>(Typescript)</SubSkill>
+                </SkillList>
+                <SkillList>
+                  React Native <SubSkill>(Typescript)</SubSkill>
+                </SkillList>
+                <SkillList>
+                  NextJS <SubSkill>(Typescript)</SubSkill>
+                </SkillList>
               </SkillUl>
             </SubProfile>
             <SubProfile>
@@ -403,8 +434,12 @@ const Resume: React.FC = () => {
                 {t("resume.skill_backend_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>Django <SubSkill>(Python)</SubSkill></SkillList>
-                <SkillList>Node <SubSkill>(Javascript)</SubSkill></SkillList>
+                <SkillList>
+                  Django <SubSkill>(Python)</SubSkill>
+                </SkillList>
+                <SkillList>
+                  Node <SubSkill>(Javascript)</SubSkill>
+                </SkillList>
               </SkillUl>
             </SubProfile>
             <SubProfile>
@@ -412,7 +447,9 @@ const Resume: React.FC = () => {
                 {t("resume.skill_etc_title")}
               </SubIntroduceTitle>
               <SkillUl>
-                <SkillList>Windows Presentation Foundation <SubSkill>(C#)</SubSkill></SkillList>
+                <SkillList>
+                  Windows Presentation Foundation <SubSkill>(C#)</SubSkill>
+                </SkillList>
                 <SkillList>Git</SkillList>
               </SkillUl>
             </SubProfile>
@@ -421,17 +458,17 @@ const Resume: React.FC = () => {
           <AwardContainer>
             <IntroduceTitle>{t("resume.award_title")}</IntroduceTitle>
             <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2018.01
-              </SubIntroduceTitle>
+              <SubIntroduceTitle>2018.01</SubIntroduceTitle>
               <Introduce>
                 <Company>
-                  <NewsTag href={"https://www.thisisgame.com/webzine/news/nboard/4/?n=79130"}>
+                  <Link
+                    href={
+                      "https://www.thisisgame.com/webzine/news/nboard/4/?n=79130"
+                    }
+                  >
                     {t("resume.award_netmarble_title")}
-                  </NewsTag>
-                  <Position>
-                    {t("resume.award_netmarble_sub")}
-                  </Position>
+                  </Link>
+                  <Position>{t("resume.award_netmarble_sub")}</Position>
                 </Company>
                 <IntroduceDescription>
                   {t("resume.award_netmarble_description")}
@@ -440,17 +477,17 @@ const Resume: React.FC = () => {
             </ExperienceSubContainer>
 
             <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2016.07
-              </SubIntroduceTitle>
+              <SubIntroduceTitle>2016.07</SubIntroduceTitle>
               <Introduce>
                 <Company>
-                  <NewsTag href={"https://www.donga.com/news/article/all/20160724/79378351/1"}>
+                  <Link
+                    href={
+                      "https://www.donga.com/news/article/all/20160724/79378351/1"
+                    }
+                  >
                     {t("resume.award_appjam11_title")}
-                  </NewsTag>
-                  <Position>
-                    {t("resume.award_appjam11_sub")}
-                  </Position>
+                  </Link>
+                  <Position>{t("resume.award_appjam11_sub")}</Position>
                 </Company>
                 <IntroduceDescription>
                   {t("resume.award_appjam11_description")}
@@ -459,17 +496,17 @@ const Resume: React.FC = () => {
             </ExperienceSubContainer>
 
             <ExperienceSubContainer>
-              <SubIntroduceTitle>
-                2016.03
-              </SubIntroduceTitle>
+              <SubIntroduceTitle>2016.03</SubIntroduceTitle>
               <Introduce>
                 <Company>
-                  <NewsTag href={"https://www.donga.com/news/article/all/20160328/77261138/1"}>
+                  <Link
+                    href={
+                      "https://www.donga.com/news/article/all/20160328/77261138/1"
+                    }
+                  >
                     {t("resume.award_appjam10_title")}
-                  </NewsTag>
-                  <Position>
-                    {t("resume.award_appjam10_sub")}
-                  </Position>
+                  </Link>
+                  <Position>{t("resume.award_appjam10_sub")}</Position>
                 </Company>
                 <IntroduceDescription>
                   {t("resume.award_appjam10_description")}
@@ -482,9 +519,11 @@ const Resume: React.FC = () => {
             <IntroduceTitle>{t("resume.others_title")}</IntroduceTitle>
             <SubProfile>
               <SubIntroduceTitle>
-                <GithubLink href="https://github.com/ryu-xh">{t("resume.others_github")}</GithubLink>
+                <GithubLink href="https://github.com/ryu-xh">
+                  {t("resume.others_github")}
+                </GithubLink>
               </SubIntroduceTitle>
-              </SubProfile>
+            </SubProfile>
           </OthersContainer>
         </Content>
       </Container>
