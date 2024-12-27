@@ -279,8 +279,10 @@ const Resume: React.FC = () => {
             2022.08 ~ <br />
             2025.01 <br />(
             {t("resume.period_years_months", {
-              years: dayjs("2022-08-08").diff(dayjs("2025-01-08"), "year"),
-              months: dayjs("2022-08-08").diff(dayjs("2025-01-08"), "month"),
+              years: dayjs("2025-01-08").diff(dayjs("2022-08-08"), "year"),
+              months: dayjs(
+                dayjs("2025-01-08").diff(dayjs("2022-08-08"), "millisecond")
+              ).month(),
             })}
             )
           </SubIntroduceTitle>
