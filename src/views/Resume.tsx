@@ -250,30 +250,30 @@ const Resume: React.FC = () => {
     return (
       <ExperienceContainer>
         <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
-{/*         <ExperienceSubContainer>
+         <ExperienceSubContainer>
           <SubIntroduceTitle>
-            2022.08 ~ <br />
+            2025.02 ~ <br />
             {t("resume.experience_working")} <br />(
             {t("resume.period_years_months", {
-              years: dayjs().diff("2022-08-08", "years"),
+              years: dayjs().diff("2025-02-01", "years"),
               months: dayjs(
-                dayjs().diff(dayjs("2022-08-08"), "millisecond")
+                dayjs().diff(dayjs("2025-02-01"), "millisecond")
               ).month(),
             })}
             )
           </SubIntroduceTitle>
           <Introduce>
             <Company>
-              <Link href="https://evmodu.kr">
-                {t("resume.company_scalardata")}
+              <Link href="https://global.fujitsu/">
+                {t("resume.company_fujitsu")}
               </Link>
-              <Position>{t("resume.position_fullstack_engineer")}</Position>
+              <Position>{t("resume.position_engineer")}</Position>
             </Company>
             <IntroduceDescription>
-              {t("resume.company_scalardata_description")}
+              {t("resume.company_fujitsu_description")}
             </IntroduceDescription>
           </Introduce>
-        </ExperienceSubContainer> */}
+        </ExperienceSubContainer>
         <ExperienceSubContainer>
           <SubIntroduceTitle>
             2022.08 ~ <br />

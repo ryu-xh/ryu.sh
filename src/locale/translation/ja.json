@@ -11,6 +11,10 @@
     "period_years_months": "{{years}}年 {{months}}ヶ月",
     "preiod_months": "{{months}}ヶ月",
 
+    "company_fujitsu": "富士通株式会社",
+    "position_engineer": "エンジニア",
+    "company_fujitsu_description": "",
+
     "company_scalardata": "SCALAR DATA (韓国語：스칼라데이터)",
     "position_frontend_engineer": "フロントエンドエンジニア",
     "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI通合とリファクタリングをしました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
