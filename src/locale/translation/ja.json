@@ -11,23 +11,24 @@
     "period_years_months": "{{years}}年 {{months}}ヶ月",
     "preiod_months": "{{months}}ヶ月",
 
+    "company_fujitsu_link": "https://global.fujitsu/ja-jp",
     "company_fujitsu": "富士通株式会社",
     "position_engineer": "エンジニア",
     "company_fujitsu_description": "",
 
-    "company_scalardata": "SCALAR DATA (韓国語：스칼라데이터)",
+    "company_scalardata": "SCALAR DATA",
     "position_frontend_engineer": "フロントエンドエンジニア",
     "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI通合とリファクタリングをしました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
 
-    "company_palzak_corporation": "PALZAK CORPORATION (韓国語：팔짝코퍼레이션)",
+    "company_palzak_corporation": "PALZAK CORPORATION",
     "position_fullstack_engineer": "フルスタックエンジニア",
     "company_team_mypacer_description": "React Nativeでランニングアプリケーションを開発しました。\nTypescriptを使ってタイプエラーを最小化しようと努力しmobxを使って全体的な状態を導入しました。\nバックエンドはDjangoとDjango Rest Frameworkを使ってAPIを作成し、テストコードを作成しエラーを最小化しようと努力しました。同時にGithub Actionsを使ってPull Requestのときにエラーがあるかをいつも検証しようとしました。\nJenkinsとFastlaneを使ってアプリケーションのビルド時間を短縮しようとCI/CDを構成しました。",
 
-    "company_team_unstablers": "TEAM UNSTABLERS (韓国語：팀언스테이블러즈)",
+    "company_team_unstablers": "TEAM UNSTABLERS",
     "position_backend_engineer": "バックエンドエンジニア",
     "company_team_unstabler_description": "NextJSを使ってフロントエンド画面構成とREST APIを連携、NestJSとTypeORMを使ってバックエンドを作成しました。",
 
-    "company_starbucks": "スターバックスコーヒーコリア",
+    "company_starbucks": "Starbucks Coffee Korea",
     "position_barista": "バラスター",
     "company_starbucks_description": "お店に定期的に指定された音声ファイルを放送できるコロナ案内ソフトウェアを開発しました。\n.Net FrameworkとC#を使って開発しました。",
 
@@ -41,8 +42,8 @@
     "educational_experience_graduation": "卒業",
 
     "skill_title": "よく使うスキル",
-    "skill_frontend_title": "フロント\nエンド",
-    "skill_backend_title": "バック\nエンド",
+    "skill_frontend_title": "FRONTEND",
+    "skill_backend_title": "BACKEND",
     "skill_etc_title": "その他",
 
     "award_title": "受賞",

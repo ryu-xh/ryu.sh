@@ -151,7 +151,7 @@ const ExperienceSubContainer = styled(SubProfile)`
   flex-direction: row;
 `;
 
-const Company = styled.div`
+const CompanyContainer = styled.div`
   font-size: 1rem;
   font-weight: 700;
   display: flex;
@@ -167,6 +167,12 @@ const Company = styled.div`
     font-size: 1.3rem;
   }
 `;
+
+const CompanyContent = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 
 const Position = styled.span`
   font-size: 0.8rem;
@@ -226,6 +232,19 @@ const Link = styled.a`
   }
 `;
 
+const LocationFlag = styled.span`
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding-left: 0.3rem;
+
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: 768px) {
+    padding-left: 0.3rem;
+    font-size: 0.9rem;
+  }
+`;
+
 const OthersContainer = styled.div`
   padding: 30px 0;
 `;
@@ -263,12 +282,15 @@ const Resume: React.FC = () => {
             )
           </SubIntroduceTitle>
           <Introduce>
-            <Company>
-              <Link href="https://global.fujitsu/">
-                {t("resume.company_fujitsu")}
-              </Link>
+            <CompanyContainer>
+              <CompanyContent>
+                <Link href={t("resume.company_fujitsu_link")}>
+                  {t("resume.company_fujitsu")}
+                </Link>
+                <LocationFlag>🇯🇵</LocationFlag>
+              </CompanyContent>
               <Position>{t("resume.position_engineer")}</Position>
-            </Company>
+            </CompanyContainer>
             <IntroduceDescription>
               {t("resume.company_fujitsu_description")}
             </IntroduceDescription>
@@ -287,12 +309,15 @@ const Resume: React.FC = () => {
             )
           </SubIntroduceTitle>
           <Introduce>
-            <Company>
-              <Link href="https://evmodu.kr">
-                {t("resume.company_scalardata")}
-              </Link>
+            <CompanyContainer>
+              <CompanyContent>
+                <Link href="https://evmodu.kr">
+                  {t("resume.company_scalardata")}
+                </Link>
+                <LocationFlag>🇰🇷</LocationFlag>
+              </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
-            </Company>
+            </CompanyContainer>
             <IntroduceDescription>
               {t("resume.company_scalardata_description")}
             </IntroduceDescription>
@@ -308,12 +333,15 @@ const Resume: React.FC = () => {
             )
           </SubIntroduceTitle>
           <Introduce>
-            <Company>
-              <Link href="https://www.palzak.co">
-                {t("resume.company_palzak_corporation")}
-              </Link>
+            <CompanyContainer>
+              <CompanyContent>
+                <Link href="https://www.palzak.co">
+                  {t("resume.company_palzak_corporation")}
+                </Link>
+                <LocationFlag>🇰🇷</LocationFlag>
+              </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
-            </Company>
+            </CompanyContainer>
             <IntroduceDescription>
               {t("resume.company_team_mypacer_description")}
             </IntroduceDescription>
@@ -329,12 +357,15 @@ const Resume: React.FC = () => {
             )
           </SubIntroduceTitle>
           <Introduce>
-            <Company>
-              <Link href="https://unstabler.pl">
-                {t("resume.company_team_unstablers")}
-              </Link>
+            <CompanyContainer>
+              <CompanyContent>
+                <Link href="https://unstabler.pl">
+                  {t("resume.company_team_unstablers")}
+                </Link>
+                <LocationFlag>🇰🇷</LocationFlag>
+              </CompanyContent>
               <Position>{t("resume.position_backend_engineer")}</Position>
-            </Company>
+            </CompanyContainer>
             <IntroduceDescription>
               {t("resume.company_team_unstabler_description")}
             </IntroduceDescription>
@@ -353,10 +384,15 @@ const Resume: React.FC = () => {
             )
           </SubIntroduceTitle>
           <Introduce>
-            <Company>
-              {t("resume.company_starbucks")}
+            <CompanyContainer>
+              <CompanyContent>
+                <Link href="https://www.starbucks.co.kr/index.do">
+                  {t("resume.company_starbucks")}
+                </Link>
+                <LocationFlag>🇰🇷</LocationFlag>
+              </CompanyContent>
               <Position>{t("resume.position_barista")}</Position>
-            </Company>
+            </CompanyContainer>
             <IntroduceDescription>
               {t("resume.company_starbucks_description")}
             </IntroduceDescription>
@@ -407,12 +443,15 @@ const Resume: React.FC = () => {
                 2020.02
               </SubIntroduceTitle>
               <Introduce>
-                <Company>
-                  {t("resume.educational_experience_college_name")}
+                <CompanyContainer>
+                  <CompanyContent>
+                    {t("resume.educational_experience_college_name")}
+                    <LocationFlag>🇰🇷</LocationFlag>
+                  </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_college_object")}
                   </Position>
-                </Company>
+                </CompanyContainer>
                 <IntroduceDescription>
                   {t("resume.educational_experience_college_description")}
                 </IntroduceDescription>
@@ -425,12 +464,15 @@ const Resume: React.FC = () => {
                 2018.02
               </SubIntroduceTitle>
               <Introduce>
-                <Company>
-                  {t("resume.educational_experience_highschool_name")}
+                <CompanyContainer>
+                  <CompanyContent>
+                    {t("resume.educational_experience_highschool_name")}
+                    <LocationFlag>🇰🇷</LocationFlag>
+                  </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_highschool_object")}
                   </Position>
-                </Company>
+                </CompanyContainer>
               </Introduce>
             </ExperienceSubContainer>
           </ExperienceContainer>
@@ -484,7 +526,7 @@ const Resume: React.FC = () => {
             <ExperienceSubContainer>
               <SubIntroduceTitle>2018.01</SubIntroduceTitle>
               <Introduce>
-                <Company>
+                <CompanyContainer>
                   <Link
                     href={
                       "https://www.thisisgame.com/webzine/news/nboard/4/?n=79130"
@@ -493,7 +535,7 @@ const Resume: React.FC = () => {
                     {t("resume.award_netmarble_title")}
                   </Link>
                   <Position>{t("resume.award_netmarble_sub")}</Position>
-                </Company>
+                </CompanyContainer>
                 <IntroduceDescription>
                   {t("resume.award_netmarble_description")}
                 </IntroduceDescription>
@@ -503,7 +545,7 @@ const Resume: React.FC = () => {
             <ExperienceSubContainer>
               <SubIntroduceTitle>2016.07</SubIntroduceTitle>
               <Introduce>
-                <Company>
+                <CompanyContainer>
                   <Link
                     href={
                       "https://www.donga.com/news/article/all/20160724/79378351/1"
@@ -512,7 +554,7 @@ const Resume: React.FC = () => {
                     {t("resume.award_appjam11_title")}
                   </Link>
                   <Position>{t("resume.award_appjam11_sub")}</Position>
-                </Company>
+                </CompanyContainer>
                 <IntroduceDescription>
                   {t("resume.award_appjam11_description")}
                 </IntroduceDescription>
@@ -522,7 +564,7 @@ const Resume: React.FC = () => {
             <ExperienceSubContainer>
               <SubIntroduceTitle>2016.03</SubIntroduceTitle>
               <Introduce>
-                <Company>
+                <CompanyContainer>
                   <Link
                     href={
                       "https://www.donga.com/news/article/all/20160328/77261138/1"
@@ -531,7 +573,7 @@ const Resume: React.FC = () => {
                     {t("resume.award_appjam10_title")}
                   </Link>
                   <Position>{t("resume.award_appjam10_sub")}</Position>
-                </Company>
+                </CompanyContainer>
                 <IntroduceDescription>
                   {t("resume.award_appjam10_description")}
                 </IntroduceDescription>
