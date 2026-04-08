@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build && touch dist/CNAME && echo 'ryu.sh' > dist/CNAME",
+    "build": "tsc && vite build && node -e \"require('fs').writeFileSync('dist/CNAME', 'ryu.sh')\"",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
