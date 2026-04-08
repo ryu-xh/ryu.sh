@@ -4,7 +4,6 @@ import {useTranslation} from "react-i18next";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
-import Coffee from "../assets/coffee.webp";
 import dayjs from "dayjs";
 import TwemojiFlag from "../components/TwemojiFlag";
 
@@ -428,7 +427,7 @@ const Resume: React.FC = () => {
               <IntroduceDescription>
                 {t("resume.introduce_description")}
               </IntroduceDescription>
-              <CoffeeImage src={Coffee} alt="latte" />
+              <CoffeeImage src="/coffee.webp" alt="latte" fetchPriority="high" />
             </Introduce>
           </Profile>
 
