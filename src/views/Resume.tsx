@@ -5,7 +5,6 @@ import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
 import Coffee from "../assets/coffee.webp";
-import Self from "../assets/self.webp";
 import dayjs from "dayjs";
 import TwemojiFlag from "../components/TwemojiFlag";
 
@@ -141,6 +140,7 @@ const IntroduceDescription = styled.span`
 const CoffeeImage = styled.img`
   padding: 20px 0;
   width: 100%;
+  aspect-ratio: 2017 / 1347;
 `;
 
 const ExperienceContainer = styled.div`
@@ -419,7 +419,7 @@ const Resume: React.FC = () => {
                 }}
               />
             </Title>
-            <ProfileIcon src={Self} alt="me" />
+            <ProfileIcon src="/self.webp" alt="me" fetchPriority="high" />
           </ContentHeader>
 
           <Profile>
