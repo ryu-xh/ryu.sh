@@ -29,7 +29,7 @@
     "company_team_unstabler_description": "NextJSを使ってフロントエンド画面構成とREST APIを連携、NestJSとTypeORMを使ってバックエンドを作成しました。",
 
     "company_starbucks": "Starbucks Coffee Korea",
-    "position_barista": "バラスター",
+    "position_barista": "バリスタ",
     "company_starbucks_description": "お店に定期的に指定された音声ファイルを放送できるコロナ案内ソフトウェアを開発しました。\n.Net FrameworkとC#を使って開発しました。",
 
     "educational_experience_title": "学歴",
@@ -37,7 +37,7 @@
     "educational_experience_highschool_object": "理系",
     "educational_experience_college_name": "新安山大学",
     "educational_experience_college_object": "コンピューター情報科",
-    "educational_experience_college_description": "React Nativeを使って学校生活に役立つアプリケーションを開発しました。\nOpenframeworksとC++を使ってMacOS環境とWindows環境の上で動作する音楽ゲームを開発しました。",
+    "educational_experience_college_description": "React Nativeを使って学校生活に役立つモバイルアプリケーションを開発しました。\nOpenframeworksとC++を使ってMacOS環境とWindows環境の上で動作する音楽ゲームを開発しました。",
 
     "educational_experience_graduation": "卒業",
 

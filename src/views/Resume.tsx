@@ -7,6 +7,7 @@ import styled from "styled-components";
 import Coffee from "../assets/coffee.webp";
 import Self from "../assets/self.webp";
 import dayjs from "dayjs";
+import TwemojiFlag from "../components/TwemojiFlag";
 
 const Container = styled.div`
   display: block;
@@ -287,7 +288,7 @@ const Resume: React.FC = () => {
                 <Link href={t("resume.company_fujitsu_link")}>
                   {t("resume.company_fujitsu")}
                 </Link>
-                <LocationFlag>🇯🇵</LocationFlag>
+                <LocationFlag><TwemojiFlag emoji="🇯🇵" /></LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_engineer")}</Position>
             </CompanyContainer>
@@ -314,7 +315,7 @@ const Resume: React.FC = () => {
                 <Link href="https://evmodu.kr">
                   {t("resume.company_scalardata")}
                 </Link>
-                <LocationFlag>🇰🇷</LocationFlag>
+                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
             </CompanyContainer>
@@ -338,7 +339,7 @@ const Resume: React.FC = () => {
                 <Link href="https://www.palzak.co">
                   {t("resume.company_palzak_corporation")}
                 </Link>
-                <LocationFlag>🇰🇷</LocationFlag>
+                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
             </CompanyContainer>
@@ -362,7 +363,7 @@ const Resume: React.FC = () => {
                 <Link href="https://unstabler.pl">
                   {t("resume.company_team_unstablers")}
                 </Link>
-                <LocationFlag>🇰🇷</LocationFlag>
+                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_backend_engineer")}</Position>
             </CompanyContainer>
@@ -389,7 +390,7 @@ const Resume: React.FC = () => {
                 <Link href="https://www.starbucks.co.kr/index.do">
                   {t("resume.company_starbucks")}
                 </Link>
-                <LocationFlag>🇰🇷</LocationFlag>
+                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_barista")}</Position>
             </CompanyContainer>
@@ -446,7 +447,7 @@ const Resume: React.FC = () => {
                 <CompanyContainer>
                   <CompanyContent>
                     {t("resume.educational_experience_college_name")}
-                    <LocationFlag>🇰🇷</LocationFlag>
+                    <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
                   </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_college_object")}
@@ -467,7 +468,7 @@ const Resume: React.FC = () => {
                 <CompanyContainer>
                   <CompanyContent>
                     {t("resume.educational_experience_highschool_name")}
-                    <LocationFlag>🇰🇷</LocationFlag>
+                    <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
                   </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_highschool_object")}
