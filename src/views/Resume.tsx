@@ -173,7 +173,6 @@ const CompanyContent = styled.div`
   flex-direction: row;
 `;
 
-
 const Position = styled.span`
   font-size: 0.8rem;
   font-weight: 400;
@@ -245,6 +244,40 @@ const LocationFlag = styled.span`
   }
 `;
 
+const CertContainer = styled.div`
+  padding: 30px 0;
+`;
+
+const CertPosition = styled(Position)`
+  @media (min-width: 768px) {
+    padding-left: 0;
+  }
+`;
+
+const CertCompanyContainer = styled(CompanyContainer)`
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const CertTopRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+`;
+
+const CertBadgeIcon = styled.img`
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  margin-left: auto;
+`;
+
 const OthersContainer = styled.div`
   padding: 30px 0;
 `;
@@ -269,14 +302,14 @@ const Resume: React.FC = () => {
     return (
       <ExperienceContainer>
         <IntroduceTitle>{t("resume.experience_title")}</IntroduceTitle>
-         <ExperienceSubContainer>
+        <ExperienceSubContainer>
           <SubIntroduceTitle>
             2025.02 ~ <br />
             {t("resume.experience_working")} <br />(
             {t("resume.period_years_months", {
               years: dayjs().diff("2025-02-01", "years"),
               months: dayjs(
-                dayjs().diff(dayjs("2025-02-01"), "millisecond")
+                dayjs().diff(dayjs("2025-02-01"), "millisecond"),
               ).month(),
             })}
             )
@@ -287,7 +320,9 @@ const Resume: React.FC = () => {
                 <Link href={t("resume.company_fujitsu_link")}>
                   {t("resume.company_fujitsu")}
                 </Link>
-                <LocationFlag><TwemojiFlag emoji="🇯🇵" /></LocationFlag>
+                <LocationFlag>
+                  <TwemojiFlag emoji="🇯🇵" />
+                </LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_engineer")}</Position>
             </CompanyContainer>
@@ -303,7 +338,7 @@ const Resume: React.FC = () => {
             {t("resume.period_years_months", {
               years: dayjs("2025-01-08").diff(dayjs("2022-08-08"), "year"),
               months: dayjs(
-                dayjs("2025-01-08").diff(dayjs("2022-08-08"), "millisecond")
+                dayjs("2025-01-08").diff(dayjs("2022-08-08"), "millisecond"),
               ).month(),
             })}
             )
@@ -314,7 +349,9 @@ const Resume: React.FC = () => {
                 <Link href="https://evmodu.kr">
                   {t("resume.company_scalardata")}
                 </Link>
-                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                <LocationFlag>
+                  <TwemojiFlag emoji="🇰🇷" />
+                </LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
             </CompanyContainer>
@@ -338,7 +375,9 @@ const Resume: React.FC = () => {
                 <Link href="https://www.palzak.co">
                   {t("resume.company_palzak_corporation")}
                 </Link>
-                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                <LocationFlag>
+                  <TwemojiFlag emoji="🇰🇷" />
+                </LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_fullstack_engineer")}</Position>
             </CompanyContainer>
@@ -362,7 +401,9 @@ const Resume: React.FC = () => {
                 <Link href="https://unstabler.pl">
                   {t("resume.company_team_unstablers")}
                 </Link>
-                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                <LocationFlag>
+                  <TwemojiFlag emoji="🇰🇷" />
+                </LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_backend_engineer")}</Position>
             </CompanyContainer>
@@ -378,7 +419,7 @@ const Resume: React.FC = () => {
             {t("resume.period_years_months", {
               years: dayjs("2021-04-30").diff(dayjs("2020-01-01"), "years"),
               months: dayjs(
-                dayjs("2021-04-30").diff(dayjs("2020-01-01"), "millisecond")
+                dayjs("2021-04-30").diff(dayjs("2020-01-01"), "millisecond"),
               ).month(),
             })}
             )
@@ -389,7 +430,9 @@ const Resume: React.FC = () => {
                 <Link href="https://www.starbucks.co.kr/index.do">
                   {t("resume.company_starbucks")}
                 </Link>
-                <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                <LocationFlag>
+                  <TwemojiFlag emoji="🇰🇷" />
+                </LocationFlag>
               </CompanyContent>
               <Position>{t("resume.position_barista")}</Position>
             </CompanyContainer>
@@ -427,7 +470,11 @@ const Resume: React.FC = () => {
               <IntroduceDescription>
                 {t("resume.introduce_description")}
               </IntroduceDescription>
-              <CoffeeImage src="/coffee.webp" alt="latte" fetchPriority="high" />
+              <CoffeeImage
+                src="/coffee.webp"
+                alt="latte"
+                fetchPriority="high"
+              />
             </Introduce>
           </Profile>
 
@@ -446,7 +493,9 @@ const Resume: React.FC = () => {
                 <CompanyContainer>
                   <CompanyContent>
                     {t("resume.educational_experience_college_name")}
-                    <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                    <LocationFlag>
+                      <TwemojiFlag emoji="🇰🇷" />
+                    </LocationFlag>
                   </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_college_object")}
@@ -467,7 +516,9 @@ const Resume: React.FC = () => {
                 <CompanyContainer>
                   <CompanyContent>
                     {t("resume.educational_experience_highschool_name")}
-                    <LocationFlag><TwemojiFlag emoji="🇰🇷" /></LocationFlag>
+                    <LocationFlag>
+                      <TwemojiFlag emoji="🇰🇷" />
+                    </LocationFlag>
                   </CompanyContent>
                   <Position>
                     {t("resume.educational_experience_highschool_object")}
@@ -520,6 +571,34 @@ const Resume: React.FC = () => {
               </SkillUl>
             </SubProfile>
           </SkillContainer>
+
+          <CertContainer>
+            <IntroduceTitle>{t("resume.cert_title")}</IntroduceTitle>
+            <ExperienceSubContainer>
+              <SubIntroduceTitle>2026.03</SubIntroduceTitle>
+              <Introduce>
+                <CertTopRow>
+                  <CertCompanyContainer>
+                    <Link
+                      href={
+                        "https://www.credly.com/badges/8be4ef4d-ebae-4411-ba20-fe3deaa915a1"
+                      }
+                    >
+                      {t("resume.cert_aws_saa_title")}
+                    </Link>
+                    <CertPosition>{t("resume.cert_aws_saa_sub")}</CertPosition>
+                  </CertCompanyContainer>
+                  <CertBadgeIcon
+                    src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+                    alt="AWS Certified Solutions Architect – Associate"
+                  />
+                </CertTopRow>
+                <IntroduceDescription>
+                  {t("resume.cert_aws_saa_description")}
+                </IntroduceDescription>
+              </Introduce>
+            </ExperienceSubContainer>
+          </CertContainer>
 
           <AwardContainer>
             <IntroduceTitle>{t("resume.award_title")}</IntroduceTitle>

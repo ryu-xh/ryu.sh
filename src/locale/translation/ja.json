@@ -14,11 +14,11 @@
     "company_fujitsu_link": "https://global.fujitsu/ja-jp",
     "company_fujitsu": "富士通株式会社",
     "position_engineer": "エンジニア",
-    "company_fujitsu_description": "",
+    "company_fujitsu_description": "モバイルアプリケーションのネイティブモジュール開発を担当しています。\nReactとAIを活用して、モバイルアプリケーションに搭載されるモジュールのテスト自動化のためのツールを開発しました。",
 
     "company_scalardata": "SCALAR DATA",
     "position_frontend_engineer": "フロントエンドエンジニア",
-    "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI通合とリファクタリングをしました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
+    "company_scalardata_description": "React Nativeを使ったアプリケーションのAPI統合とリファクタリングを行いました。\n主にアプリ内で必要なモジュールや構造設計を担当しました。\nSwiftを使ってiOSのiBeaconネイティブモジュール開発\nKotlinを使ってAndroidの交通カード互換のNFCモジュール開発\nNextJSでお知らせやイベント情報などアプリケーションと共存するウェブページを開発\n交通カード互換のNFCモジュールを使って内部カードリーダーアプリケーション制作\nTeamCityを使ってアプリケーションのStagingとProductionのビルドを配布できるようにCI/CD構成",
 
     "company_palzak_corporation": "PALZAK CORPORATION",
     "position_fullstack_engineer": "フルスタックエンジニア",
@@ -59,6 +59,11 @@
     "award_appjam10_title": "AppJam 10回",
     "award_appjam10_sub": "最優秀賞",
     "award_appjam10_description": "チームWierで参加して投票式悩み相談アプリケーションを作りました。",
+
+    "cert_title": "資格",
+    "cert_aws_saa_title": "AWS Certified Solutions Architect – Associate",
+    "cert_aws_saa_sub": "Amazon Web Services",
+    "cert_aws_saa_description": "AWSクラウドインフラの設計・アーキテクチャ能力を証明する資格を取得しました。",
 
     "others_title": "その他",
     "others_github": "GitHub"
