@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -12,11 +12,25 @@
     <meta name="description" content="Developer RYU" />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Twemoji flags are still served from jsDelivr; warm the connection early -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Self-hosted Pretendard subset (single same-origin request).
+         @font-face lives in index.css; preload so it downloads in parallel. -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/pretendard-subset.woff2"
+      crossorigin
+    />
+
     <link rel="preload" as="image" href="/self.webp" fetchpriority="high" />
     <link rel="preload" as="image" href="/coffee.webp" fetchpriority="high" />
     <title>RYU</title>
-    <script type="module" crossorigin src="/assets/index-BbNIefn2.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BEyHAtOG.css">
+    <script type="module" crossorigin src="/assets/index-DHUcFuVR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C3fukIMC.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
