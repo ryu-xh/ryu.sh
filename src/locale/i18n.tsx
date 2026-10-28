@@ -13,24 +13,30 @@ const resources = {
   },
 };
 
-const userLanguage = window.navigator.language;
+// Guard browser-only globals so this module also runs during SSR/prerender.
+const isBrowser = typeof window !== "undefined";
+const storedLanguage = isBrowser ? localStorage.getItem("language") : null;
+const userLanguage = isBrowser ? window.navigator.language : undefined;
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem("language") || userLanguage || "ko",
+  // Server prerenders in the default language (ko); the client re-resolves.
+  lng: storedLanguage || userLanguage || "ko",
   fallbackLng: "ko",
   interpolation: {
     escapeValue: false,
   },
 });
 
-document.documentElement.lang = i18n.language;
+if (isBrowser) {
+  document.documentElement.lang = i18n.language;
+}
 
 // Fonts are self-hosted via @font-face in index.css. The JP subset is fetched
 // lazily by the browser only when a :lang(ja) glyph is actually rendered, so
 // Korean visitors never download it — no manual injection needed here.
 i18n.on("languageChanged", (lng) => {
-  document.documentElement.lang = lng;
+  if (isBrowser) document.documentElement.lang = lng;
 });
 
 export default i18n;

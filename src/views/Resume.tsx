@@ -473,7 +473,8 @@ const Resume: React.FC = () => {
                 }}
               />
             </Title>
-            <ProfileIcon src="/self.webp" alt="me" fetchPriority="high" />
+            {/* Priority is driven by the <link rel="preload"> in index.html */}
+            <ProfileIcon src="/self.webp" alt="me" />
           </ContentHeader>
 
           <Profile>
@@ -485,7 +486,8 @@ const Resume: React.FC = () => {
               <CoffeeImage
                 src="/coffee.webp"
                 alt="latte"
-                fetchPriority="high"
+                loading="lazy"
+                decoding="async"
               />
             </Introduce>
           </Profile>
@@ -601,8 +603,12 @@ const Resume: React.FC = () => {
                     <CertPosition>{t("resume.cert_aws_saa_sub")}</CertPosition>
                   </CertCompanyContainer>
                   <CertBadgeIcon
-                    src="https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+                    src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
                     alt="AWS Certified Solutions Architect – Associate"
+                    loading="lazy"
+                    decoding="async"
+                    width={68}
+                    height={68}
                   />
                 </CertTopRow>
                 <IntroduceDescription>

@@ -13,9 +13,6 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Twemoji flags are still served from jsDelivr; warm the connection early -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-
     <!-- Self-hosted Pretendard subset (single same-origin request).
          @font-face lives in index.css; preload so it downloads in parallel. -->
     <link
@@ -26,8 +23,9 @@
       crossorigin
     />
 
+    <!-- Only the above-the-fold profile image is preloaded; coffee.webp is
+         below the fold and lazy-loaded, so it no longer blocks initial load -->
     <link rel="preload" as="image" href="/self.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/coffee.webp" fetchpriority="high" />
     <title>RYU</title>
   </head>
   <body>

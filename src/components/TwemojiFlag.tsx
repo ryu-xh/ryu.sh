@@ -14,7 +14,8 @@ interface Props {
 
 const TwemojiFlag: React.FC<Props> = ({ emoji, className, style }) => {
   const codepoint = getCodePoint(emoji);
-  const src = `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/${codepoint}.svg`;
+  // Self-hosted (public/flags/) — avoids a cross-origin request per flag
+  const src = `/flags/${codepoint}.svg`;
 
   return (
     <img
