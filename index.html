@@ -23,12 +23,22 @@
       crossorigin
     />
 
-    <!-- Only the above-the-fold profile image is preloaded; coffee.webp is
-         below the fold and lazy-loaded, so it no longer blocks initial load -->
-    <link rel="preload" as="image" href="/self.webp" fetchpriority="high" />
+    <!-- Profile image (top of page) -->
+    <link rel="preload" as="image" href="/self.webp" />
+    <!-- coffee.webp is the mobile LCP element: preload it responsively at high
+         priority so the largest paint happens early -->
+    <link
+      rel="preload"
+      as="image"
+      href="/coffee.webp"
+      imagesrcset="/coffee-800.webp 800w, /coffee.webp 1536w"
+      imagesizes="(min-width: 768px) 768px, 100vw"
+      fetchpriority="high"
+    />
     <title>RYU</title>
-    <script type="module" crossorigin src="/assets/index-CeGkY3On.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C3fukIMC.css">
+    <script type="module" crossorigin src="/assets/index-DvO37-CW.js"></script>
+    <style>@font-face{font-family:Pretendard Variable;font-weight:45 930;font-style:normal;font-display:swap;src:url(/fonts/pretendard-subset.woff2)format("woff2")}@font-face{font-family:Pretendard JP Variable;font-weight:45 930;font-style:normal;font-display:swap;src:url(/fonts/pretendard-jp-subset.woff2)format("woff2")}@font-face{font-family:Pretendard Fallback;src:local(Apple SD Gothic Neo),local(Malgun Gothic),local("sans-serif");size-adjust:97%;ascent-override:97%;descent-override:normal;line-gap-override:normal}html,body{color:#fff;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#222;margin:0}body:lang(ja){font-family:Pretendard JP Variable,Pretendard Fallback,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}body:lang(ko){font-family:Pretendard Variable,Pretendard Fallback,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}::selection{color:#fff;background:#3f3f3f}code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}
+</style>
   <style data-styled="true" data-styled-version="5.3.11">.jVhcVc{display:block;}/*!sc*/
 data-styled.g1[id="sc-aXZVg"]{content:"jVhcVc,"}/*!sc*/
 .blGRwf{margin:auto;max-width:768px;padding:100px 2.5rem;}/*!sc*/
@@ -116,7 +126,7 @@ data-styled.g31[id="sc-jsJBEP"]{content:"dNEOUf,"}/*!sc*/
 주로 ReactJS를 사용하여 프론트엔드와 Django를 사용하여 백엔드를 개발하고 있어요.
 그리고 항상 재미있는 것들을 개발하고 있어요.
 
-함께 커피 한잔 마시면서 이야기를 하고 싶어요.</span><img src="/coffee.webp" alt="latte" loading="lazy" decoding="async" class="sc-kpDqfm fNwOon"/></span></div><div class="sc-dAlyuH kdyjlC"><span class="sc-imWYAI cGQuTr">경력</span><div class="sc-gsFSXq sc-jlZhew bGIxCE jaZRnS"><span class="sc-jXbUNg gSLyoA">2025.02 ~ <br/>현재<!-- --> <br/>(<!-- -->1년 8개월<!-- -->)</span><span class="sc-kAyceB dTRoMR"><div class="sc-cwHptR ghOxo"><div class="sc-jEACwC imwqEn"><a href="https://global.fujitsu/" class="sc-ikkxIA gYyUeq">후지쯔주식회사</a><span class="sc-dAbbOL hTlayR"><img src="/flags/1f1ef-1f1f5.svg" alt="🇯🇵" draggable="false" style="height:1em;width:1em;vertical-align:-0.1em;display:inline-block"/></span></div><span class="sc-cPiKLX kFdVNh">엔지니어</span></div><span class="sc-dhKdcB dMzukC">모바일 어플리케이션의 네이티브 모듈 개발을 담당하고 있습니다.
+함께 커피 한잔 마시면서 이야기를 하고 싶어요.</span><img src="/coffee.webp" srcSet="/coffee-800.webp 800w, /coffee.webp 1536w" sizes="(min-width: 768px) 768px, 100vw" alt="latte" decoding="async" class="sc-kpDqfm fNwOon"/></span></div><div class="sc-dAlyuH kdyjlC"><span class="sc-imWYAI cGQuTr">경력</span><div class="sc-gsFSXq sc-jlZhew bGIxCE jaZRnS"><span class="sc-jXbUNg gSLyoA">2025.02 ~ <br/>현재<!-- --> <br/>(<!-- -->1년 8개월<!-- -->)</span><span class="sc-kAyceB dTRoMR"><div class="sc-cwHptR ghOxo"><div class="sc-jEACwC imwqEn"><a href="https://global.fujitsu/" class="sc-ikkxIA gYyUeq">후지쯔주식회사</a><span class="sc-dAbbOL hTlayR"><img src="/flags/1f1ef-1f1f5.svg" alt="🇯🇵" draggable="false" style="height:1em;width:1em;vertical-align:-0.1em;display:inline-block"/></span></div><span class="sc-cPiKLX kFdVNh">엔지니어</span></div><span class="sc-dhKdcB dMzukC">모바일 어플리케이션의 네이티브 모듈 개발을 담당하고 있습니다.
 React와 AI를 활용하여 모바일 어플리케이션에 탑재되는 모듈의 테스트 자동화를 위한 도구를 개발하였습니다.</span></span></div><div class="sc-gsFSXq sc-jlZhew bGIxCE jaZRnS"><span class="sc-jXbUNg gSLyoA">2022.08 ~ <br/>2025.01 <br/>(<!-- -->2년 5개월<!-- -->)</span><span class="sc-kAyceB dTRoMR"><div class="sc-cwHptR ghOxo"><div class="sc-jEACwC imwqEn"><a href="https://evmodu.kr" class="sc-ikkxIA gYyUeq">스칼라데이터</a><span class="sc-dAbbOL hTlayR"><img src="/flags/1f1f0-1f1f7.svg" alt="🇰🇷" draggable="false" style="height:1em;width:1em;vertical-align:-0.1em;display:inline-block"/></span></div><span class="sc-cPiKLX kFdVNh">풀스택 엔지니어</span></div><span class="sc-dhKdcB dMzukC">React Native를 사용한 어플리케이션의 API 통합과 리팩토링을 했습니다.
 주로 앱 내에서 필요한 모듈 및 구조 설계를 담당했습니다.
 Swift를 사용한 iOS용 iBeacon 네이티브 모듈 개발
