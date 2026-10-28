@@ -483,10 +483,13 @@ const Resume: React.FC = () => {
               <IntroduceDescription>
                 {t("resume.introduce_description")}
               </IntroduceDescription>
+              {/* Likely the mobile LCP element: load eagerly, responsive
+                  srcset serves ~42KB on phones instead of the 1536px file */}
               <CoffeeImage
                 src="/coffee.webp"
+                srcSet="/coffee-800.webp 800w, /coffee.webp 1536w"
+                sizes="(min-width: 768px) 768px, 100vw"
                 alt="latte"
-                loading="lazy"
                 decoding="async"
               />
             </Introduce>

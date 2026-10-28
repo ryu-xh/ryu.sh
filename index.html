@@ -23,9 +23,18 @@
       crossorigin
     />
 
-    <!-- Only the above-the-fold profile image is preloaded; coffee.webp is
-         below the fold and lazy-loaded, so it no longer blocks initial load -->
-    <link rel="preload" as="image" href="/self.webp" fetchpriority="high" />
+    <!-- Profile image (top of page) -->
+    <link rel="preload" as="image" href="/self.webp" />
+    <!-- coffee.webp is the mobile LCP element: preload it responsively at high
+         priority so the largest paint happens early -->
+    <link
+      rel="preload"
+      as="image"
+      href="/coffee.webp"
+      imagesrcset="/coffee-800.webp 800w, /coffee.webp 1536w"
+      imagesizes="(min-width: 768px) 768px, 100vw"
+      fetchpriority="high"
+    />
     <title>RYU</title>
   </head>
   <body>

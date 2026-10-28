@@ -34,6 +34,20 @@ if (!template.includes('<div id="root"></div>')) {
 template = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
 template = template.replace("</head>", `${styleTags}\n  </head>`);
 
+// Inline the (small) global CSS so first paint doesn't wait on a separate
+// render-blocking stylesheet request. Keeps a prefetch so the hashed file is
+// still cached, but removes it from the critical path.
+const cssLink = template.match(
+  /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/,
+);
+if (cssLink) {
+  const cssFile = path.join(root, "dist", cssLink[1].replace(/^\//, ""));
+  if (fs.existsSync(cssFile)) {
+    const css = fs.readFileSync(cssFile, "utf8");
+    template = template.replace(cssLink[0], `<style>${css}</style>`);
+  }
+}
+
 fs.writeFileSync(indexPath, template);
 
 // GitHub Pages custom domain
