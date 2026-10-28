@@ -1,11 +1,24 @@
 import React from "react";
-import {Scrollbar} from "smooth-scrollbar-react";
 import {useTranslation} from "react-i18next";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
-import dayjs from "dayjs";
 import TwemojiFlag from "../components/TwemojiFlag";
+
+// Replaces dayjs: whole-year/month difference between two dates.
+// `end` defaults to now so "ongoing" periods update automatically.
+const diffYM = (start: string, end: Date | string = new Date()) => {
+  const s = new Date(start);
+  const e = typeof end === "string" ? new Date(end) : end;
+  let months =
+    (e.getFullYear() - s.getFullYear()) * 12 + (e.getMonth() - s.getMonth());
+  if (e.getDate() < s.getDate()) months -= 1;
+  return {
+    years: Math.floor(months / 12),
+    months: months % 12,
+    totalMonths: months,
+  };
+};
 
 const Container = styled.div`
   display: block;
@@ -298,6 +311,12 @@ const GithubLink = styled.a`
 const Resume: React.FC = () => {
   const {t} = useTranslation();
 
+  const fujitsu = diffYM("2025-02-01");
+  const scalardata = diffYM("2022-08-08", "2025-01-08");
+  const palzak = diffYM("2021-11-01", "2022-08-05");
+  const unstablers = diffYM("2021-05-01", "2021-10-31");
+  const starbucks = diffYM("2020-01-01", "2021-04-30");
+
   const renderExperience = () => {
     return (
       <ExperienceContainer>
@@ -307,10 +326,8 @@ const Resume: React.FC = () => {
             2025.02 ~ <br />
             {t("resume.experience_working")} <br />(
             {t("resume.period_years_months", {
-              years: dayjs().diff("2025-02-01", "years"),
-              months: dayjs(
-                dayjs().diff(dayjs("2025-02-01"), "millisecond"),
-              ).month(),
+              years: fujitsu.years,
+              months: fujitsu.months,
             })}
             )
           </SubIntroduceTitle>
@@ -336,10 +353,8 @@ const Resume: React.FC = () => {
             2022.08 ~ <br />
             2025.01 <br />(
             {t("resume.period_years_months", {
-              years: dayjs("2025-01-08").diff(dayjs("2022-08-08"), "year"),
-              months: dayjs(
-                dayjs("2025-01-08").diff(dayjs("2022-08-08"), "millisecond"),
-              ).month(),
+              years: scalardata.years,
+              months: scalardata.months,
             })}
             )
           </SubIntroduceTitle>
@@ -365,7 +380,7 @@ const Resume: React.FC = () => {
             2021.11 ~ <br />
             2022.08 <br />(
             {t("resume.preiod_months", {
-              months: dayjs("2022-08-05").diff(dayjs("2021-11-01"), "month"),
+              months: palzak.totalMonths,
             })}
             )
           </SubIntroduceTitle>
@@ -391,7 +406,7 @@ const Resume: React.FC = () => {
             2021.05 ~ <br />
             2021.10 <br />(
             {t("resume.preiod_months", {
-              months: dayjs("2021-10-31").diff(dayjs("2021-05-01"), "month"),
+              months: unstablers.totalMonths,
             })}
             )
           </SubIntroduceTitle>
@@ -417,10 +432,8 @@ const Resume: React.FC = () => {
             2020.01 ~ <br />
             2021.04 <br />(
             {t("resume.period_years_months", {
-              years: dayjs("2021-04-30").diff(dayjs("2020-01-01"), "years"),
-              months: dayjs(
-                dayjs("2021-04-30").diff(dayjs("2020-01-01"), "millisecond"),
-              ).month(),
+              years: starbucks.years,
+              months: starbucks.months,
             })}
             )
           </SubIntroduceTitle>
@@ -446,9 +459,8 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <Scrollbar>
-      <Container>
-        <Content>
+    <Container>
+      <Content>
           <ContentHeader>
             <Title>
               <Typewriter
@@ -670,9 +682,8 @@ const Resume: React.FC = () => {
               </SubIntroduceTitle>
             </SubProfile>
           </OthersContainer>
-        </Content>
-      </Container>
-    </Scrollbar>
+      </Content>
+    </Container>
   );
 };
 

@@ -13,14 +13,16 @@
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
 
-    <!-- Fonts & emoji assets are served from jsDelivr; warm the connection early -->
+    <!-- Twemoji flags are still served from jsDelivr; warm the connection early -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-    <!-- Default (ko) font loaded directly (no render-blocking @import chain);
-     the JP font is injected at runtime only for Japanese visitors -->
+    <!-- Self-hosted Pretendard subset (single same-origin request).
+         @font-face lives in index.css; preload so it downloads in parallel. -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css"
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/pretendard-subset.woff2"
       crossorigin
     />
 

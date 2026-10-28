@@ -1,3 +1,21 @@
+/* Self-hosted Pretendard subsets (only the glyphs this page uses).
+   Regenerate with scripts/subset-fonts.sh after editing visible text. */
+@font-face {
+  font-family: 'Pretendard Variable';
+  font-weight: 45 930;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/pretendard-subset.woff2') format('woff2');
+}
+@font-face {
+  /* JP file is fetched lazily — only when a :lang(ja) glyph is rendered */
+  font-family: 'Pretendard JP Variable';
+  font-weight: 45 930;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/pretendard-jp-subset.woff2') format('woff2');
+}
+
 /* Fallback font metric overrides to reduce CLS from font-display: swap */
 @font-face {
   font-family: 'Pretendard Fallback';
@@ -40,8 +58,4 @@ body:lang(ko) {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-img {
-  transform: translate(0px, 0px)!important;
 }
